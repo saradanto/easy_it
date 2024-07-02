@@ -18,7 +18,11 @@
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
+          <a href="
+          ">
           <button class="btn btn-info btn-lg mx-2" href="#">login</button>
+        </a>
+          
         </li>
         <li class="nav-item">
           <button class="btn btn-info btn-lg mx-2" href="#">register</button>
