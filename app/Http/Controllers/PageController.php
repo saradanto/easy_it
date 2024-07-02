@@ -1,27 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use Illuminate\http\PageController;
+use app\Http\PageController
 
 class PageController extends Controller
 {
-    public function show(Article $article)
-{
+   public function homepage()
+  {
+      $notices = Notice::take(6)->OrderBy('create at ' ,'desc' ) get()
+      return view('homepage');
 
-    return view('article.show', compact('article'));
-}
+
+  }
 
 
-public function index()
- {
-   $articles = Article::orderBy('created_at', 'desc')->paginate(6); return view('article.index', compact('articles'));
- }
-}
+  public function notice ()
 
-public function homepage()
-{
-    $articles = Article::orderBy('created_at', 'desc')->take(6)->get();
-    return view('welcome', compact('articles'));
-}
+  {
+     return view ('notice');
+
+  }
+
+  public function contact()
+  {
+
+    return view('contact');
+  }
+
+  }
