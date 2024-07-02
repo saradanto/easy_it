@@ -20,7 +20,7 @@
         <li class="nav-item">
           <a href="
           ">
-          <button class="btn btn-info btn-lg mx-2" href="#">login</button>
+          <button class="btn btn-info btn-lg mx-2" href="{{ route('login')}}">login</button>
         </a>
           
         </li>
