@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArticleController; 
+use App\Http\Controllers\PageController; 
 
-Route::get('/', [ArticleController::class, 'welcome'])->name('welcome');
-Route::get('/articles', [ArticleController::class, 'index'])->name('article.index');
-Route::get('/article/{article}', [ArticleController::class, 'show'])->name('article.show');
-Route::get('/category/{category}', [ArticleController::class, 'bycategory'])->name('article.bycategory');
+Route::get('/', [PageController::class, 'welcome'])->name('welcome');
+Route::get('/articles', [PageController::class, 'index'])->name('article.index');
+Route::get('/article/{article}', [PageController::class, 'show'])->name('article.show');
+Route::get('/category/{category}', [PageController::class, 'bycategory'])->name('article.bycategory');
