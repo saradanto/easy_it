@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController; 
 
+Route::resource('article', ArticleController::class);
 Route::get('/', [PageController::class, 'welcome'])->name('welcome');
-Route::get('/articles', [PageController::class, 'index'])->name('article.index');
-Route::get('/article/{article}', [PageController::class, 'show'])->name('article.show');
-Route::get('/category/{category}', [PageController::class, 'bycategory'])->name('article.bycategory');
+Route::get('/notice', [PageController::class, 'notice'])->name('notice');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/homepage', [PageController::class, 'homepage'])->name('homepage');
+
