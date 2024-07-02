@@ -18,11 +18,13 @@
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <button class="btn btn-outline-dark nav-link" href="#">login</button>
+            <a class="btn btn-outline-dark nav-link" href="#">login</a>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-dark nav-link" href="#">register</button>
+            <a class="btn btn-outline-dark nav-link" href="#">register</a>
           </li>
+           
+
         </ul>
       </div>
     </div>
