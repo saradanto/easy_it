@@ -15,3 +15,8 @@ a:hover {
 a.more {
     font-weight: 600; 
 }
+
+.ourList {
+    align-items: end;
+    justify-content: end;
+}
