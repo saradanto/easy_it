@@ -46,6 +46,7 @@
         @csrf
           <button class="nav-link" type="submit" >Logout</button>
       </form>
+      <a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-4">Crea nuovo articolo</a>
     </div>
   </div>
 </nav>
