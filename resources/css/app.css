@@ -1,5 +1,9 @@
 @import 'bootstrap';
 
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 a {
     text-decoration: none;
     -webkit-transition: .3s all ease;
@@ -14,4 +18,9 @@ a:hover {
 }
 a.more {
     font-weight: 600; 
+}
+
+.ourList {
+    align-items: end;
+    justify-content: end;
 }
