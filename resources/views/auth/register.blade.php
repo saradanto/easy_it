@@ -16,16 +16,18 @@
                 @csrf
 
                 <div data-mdb-input-init class="form-outline mb-2">
-                  <input type="text" id="name" value="{{old('name')}}" name="name" class="form-control form-control-lg" />
                   <label class="form-label" for="name">Nome</label>
+                  <input type="text" id="name" value="{{old('name')}}" name="name" class="form-control form-control-lg" />
+                  
                   @error('name')
                     <span>{{ $message}}</span>
                       
                   @enderror
                 </div>
                 <div data-mdb-input-init class="form-outline mb-2">
+                     <label class="form-label" for="name">Email</label>
                     <input type="email" id="email" value="{{old('email')}}" name="email" class="form-control form-control-lg" />
-                    <label class="form-label" for="name">Email</label>
+                    
                     @error('email')
                       <span>{{ $message}}</span>
                         
@@ -33,13 +35,15 @@
                   </div>
 
                 <div data-mdb-input-init class="form-outline mb-2">
-                  <input type="password" id="password" name="password" class="form-control form-control-lg" />
                   <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                  
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-2">
-                  <input type="password" id="password_confirmation" name="password_confirmation" class="form-control form-control-lg" />
                   <label class="form-label" for="password_confirmation">Conferma la tua password</label>
+                  <input type="password" id="password_confirmation" name="password_confirmation" class="form-control form-control-lg" />
+                  
                 </div>
 
                 {{-- <div class="form-check d-flex justify-content-center mb-5">

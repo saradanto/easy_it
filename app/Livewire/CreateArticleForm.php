@@ -21,8 +21,12 @@ class CreateArticleForm extends Component
     public $article;
 
     public function store(){
+
         $this->validate();
-        $this->article = Article::create([
+
+
+
+        Article::create([
             'title'=> $this->title,
             'description' => $this->description,
             'price'=> $this->price,
@@ -30,11 +34,19 @@ class CreateArticleForm extends Component
             'user_id'=> Auth::id()
         ]);
 
+
+
+        session()->flash('status', 'Prodotto aggiunto con successo.');
+
+
         $this->cleanForm();
 
-        session()->flash('success', 'Articolo creato con successo.');
+        return redirect()->route('article.index');
+
+
 
     }
+
 
     public function cleanForm(){
         $this->title = '';
