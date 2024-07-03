@@ -42,8 +42,9 @@
           <a class="nav-link" href="{{route('register')}}">Register</a>
         </li>
       </ul>
-      <form>
-          <a class="nav-link" href="#">Logout</a>
+      <form action="{{ route('logout')}}" method="POST">
+        @csrf
+          <button class="nav-link" >Logout</button>
       </form>
     </div>
   </div>
