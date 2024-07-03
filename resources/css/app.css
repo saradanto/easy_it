@@ -1,5 +1,9 @@
 @import 'bootstrap';
 
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 a {
     text-decoration: none;
     -webkit-transition: .3s all ease;
