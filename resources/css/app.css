@@ -1,10 +1,39 @@
 @import 'bootstrap';
 
-body {
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
 
-a {
+body {
+    min-height: 100vh;
+    background: url('assets/cuffie_easy_it.avif') no-repeat;
+    font-family: "Roboto", sans-serif;
+}
+
+/* classi form registrazione */
+.gradient-custom-3 {
+
+    background: #84fab0;
+
+
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+    }
+    .gradient-custom-4 {
+
+    background: #84fab0;
+
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+    }
+/* a {
     text-decoration: none;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
@@ -18,9 +47,10 @@ a:hover {
 }
 a.more {
     font-weight: 600; 
-}
+} */
 
 .ourList {
     align-items: end;
     justify-content: end;
 }
+
