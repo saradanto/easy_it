@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController; 
-use app\Http\Controllers\AricleController
+use app\Http\Controllers\ArticleController;
 
 Route::resource('article', ArticleController::class);
 Route::get('/', [PageController::class, 'welcome'])->name('welcome');
