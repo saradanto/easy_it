@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Http\Request;
-use app\Http\PageController
+use app\Http\PageController;
 
 class PageController extends Controller
 {
    public function homepage()
   {
-      $notices = Notice::take(6)->OrderBy('create at ' ,'desc' ) get()
+      $notices = Notice::take(6)->OrderBy('create at ' ,'desc' ) ;
       return view('homepage');
 
 
