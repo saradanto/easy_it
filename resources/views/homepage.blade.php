@@ -5,7 +5,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ">
         <div class="col">
           <div class="card h-100 rounded">
-            <img src="https://picsum.photos/200/300?random=1" alt="Image">
+            <img src="https://picsum.photos/200/300?random=1"  alt="Image">
             <div class="card-body">
               <h5 class="card-title">oggeti vari</h5>
               <p class="card-text">100</p>
