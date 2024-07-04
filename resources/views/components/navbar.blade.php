@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="ourNavbar navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
     <a class="navbar-brand" href="{{route('homepage')}}">
       <svg width="auto" height="40px" viewBox="0 0 151 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ourList">
         <li class="nav-item">
           <a class="nav-link " href="{{route('homepage')}}">Home</a>
         </li>
@@ -44,9 +44,24 @@
       </ul>
       <form action="{{ route('logout')}}" method="POST">
         @csrf
-          <button class="nav-link" type="submit" >Logout</button>
+        <button class="nav-link" type="submit">Logout</button>
       </form>
       <a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-4">Crea nuovo articolo</a>
     </div>
   </div>
 </nav>
+<header class="ourHeader py-5">
+  <div class="container px-5">
+    <div class="row gx-5 align-items-center justify-content-center">
+      <div class="col-lg-8 col-xl-7 col-xxl-6">
+        <div class="my-5 text-center text-xl-start">
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
+            <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/cuffie_easy_it" alt="cuffie" /></div>
+    </div>
+  </div>
+</header>

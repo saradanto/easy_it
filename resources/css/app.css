@@ -9,8 +9,39 @@
 
 body {
     min-height: 100vh;
-    background: url('assets/cuffie_easy_it.avif') no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: "Roboto", sans-serif;
+}
+
+.ourNavbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 1.2rem 8%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.ourList {
+    align-items: end;
+    justify-content: end;
+}
+
+.ourHeader {
+    box-shadow: 5px 10px 3px #00c2ff inset;
+    text-shadow: 5px -5px 2px #00c2ff;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/assets/cuffie_easy_it.png');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* classi form registrazione */
@@ -48,9 +79,3 @@ a:hover {
 a.more {
     font-weight: 600; 
 } */
-
-.ourList {
-    align-items: end;
-    justify-content: end;
-}
-
