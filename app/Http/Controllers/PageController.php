@@ -17,19 +17,24 @@ class PageController extends Controller
 
   }
 
-
   public function notice ()
-
   {
-     
      return view ('notice');
-
   }
 
   public function contact()
   {
-
     return view('contact');
   }
 
+  public function daniele()
+  {
+    return view('daniele');
   }
+
+  public function juri()
+  {
+    return view('juri');
+  }
+
+}
