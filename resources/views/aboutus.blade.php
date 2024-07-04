@@ -1,6 +1,6 @@
    <x-main> 
 
-   <body style="background-color: rgb(57, 161, 196);">
+   <body style="background-color: #CBE5EE;">
    <div class=container>
     <main>
         
