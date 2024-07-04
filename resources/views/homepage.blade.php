@@ -7,8 +7,8 @@
           <div class="card h-100 rounded">
             <img src="https://picsum.photos/200/300?random=1" alt="Image">
             <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">Price</p>
+              <h5 class="card-title">oggeti vari</h5>
+              <p class="card-text">100</p>
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">
@@ -21,8 +21,8 @@
           <div class="card h-100">
             <img src="https://picsum.photos/200/300?random=1" alt="Image">
             <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">Price</p>
+              <h5 class="card-title">Moto</h5>
+              <p class="card-text">4500</p>
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">
@@ -35,8 +35,8 @@
           <div class="card h-100">
             <img src="https://picsum.photos/200/300?random=1" alt="Image">
             <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">Price</p>
+              <h5 class="card-title">Auto nuova</h5>
+              <p class="card-text">7000</p>
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">
@@ -52,8 +52,8 @@
           <div class="card h-100">
             <img src="https://picsum.photos/200/300?random=1" alt="Image">
             <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">Price</p>
+              <h5 class="card-title">Oggetto hobby</h5>
+              <p class="card-text">50</p>
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">
@@ -66,8 +66,8 @@
           <div class="card h-100">
             <img src="https://picsum.photos/200/300?random=1" alt="Image">
             <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">Price</p>
+              <h5 class="card-title">Oggetto per svago</h5>
+              <p class="card-text">20</p>
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">
@@ -80,8 +80,8 @@
           <div class="card h-100">
             <img src="https://picsum.photos/200/300?random=1" alt="Image">
             <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">Price</p>
+              <h5 class="card-title">Scheda madre </h5>
+              <p class="card-text">150</p>
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">
