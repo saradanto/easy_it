@@ -1,16 +1,4 @@
 <x-main>
-<<<<<<< HEAD
-  
-  <body style="background-color: rgb(57, 161, 196);">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ">
-        <div class="col">
-          <div class="card h-100 rounded">
-            <img src="https://picsum.photos/200/300?random=1"  alt="Image">
-            <div class="card-body">
-              <h5 class="card-title">oggeti vari</h5>
-              <p class="card-text">100</p>
-=======
 
   <header class="" style="background-color: #CBE5EE; padding: 130px 0px;">
     <div class="container px-5">
@@ -24,7 +12,6 @@
                       <a class="btn btn-outline-dark btn-lg px-4 rounded-5" href="{{route('notice')}}">Cerca annuncio</a>
                     </div>
                 </div>
->>>>>>> 41e6556d5753ecf281b485d69a881d01e0b66925
             </div>
             <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5 ms-5" src="{{URL::asset('assets/cuffie_easy_it.png')}}" alt="..." /></div>
         </div>
