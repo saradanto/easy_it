@@ -11,7 +11,7 @@
               </div>
               <div class="col-lg-6">
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">About us</h1>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptates laudantium nobis eligendi, fuga molestias! Nisi dolorum architecto alias necessitatibus debitis blanditiis ut, facilis, cum voluptatibus dignissimos possimus repudiandae similique!</p>
+                <p class="lead">Siamo un team con la passione per l'ecommerce</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                   <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Show more</button>
                   <button type="button" class="btn btn-outline-secondary btn-lg px-4">Details</button>
