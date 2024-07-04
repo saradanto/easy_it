@@ -1,4 +1,4 @@
-<nav class="ourNavbar navbar navbar-expand-lg bg-body-tertiary">
+<nav class="ourNavbar navbar navbar-expand-lg bg-transparent">
   <div class="container">
     <a class="navbar-brand" href="{{route('homepage')}}">
       <svg width="auto" height="40px" viewBox="0 0 151 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,29 +28,37 @@
           <a class="nav-link " href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('notice')}}">Notice</a>
+          <a class="nav-link" href="{{route('notice')}}">Annunci</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('contact')}}">Contact</a>
+          <a class="nav-link" href="{{route('contact')}}">Contatti</a>
         </li>
       </ul>
+      @guest  
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link " href="{{route('login')}}">Login</a>
+          <a class="nav-link " href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i> login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('register')}}">Register</a>
+          <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i> Register</a>
         </li>
+      @else
+        <div class="nav-item ms-auto">
+          <span class="nav-link">Benvenuto, <span class="fw-bolder">{{ Auth::user()->name }}</span></span>
+        </div>
+        <div class="nav-item ms-3">
+          <form action="{{ route('logout')}}" method="POST">
+            @csrf
+            <button class="nav-link text-danger" type="submit">Logout</button>
+          </form>
+        </div>
       </ul>
-      <form action="{{ route('logout')}}" method="POST">
-        @csrf
-        <button class="nav-link" type="submit">Logout</button>
-      </form>
-      <a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-4">Crea nuovo articolo</a>
+      @endguest
+        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-5"><i class="bi bi-plus-circle me-2"></i>Inserisci un articolo</a></span>
     </div>
   </div>
 </nav>
-<header class="ourBgImage py-5">
+<header class="ourHeader py-5">
   <div class="container px-5">
     <div class="row gx-5 align-items-center justify-content-center">
       <div class="col-lg-8 col-xl-7 col-xxl-6">
@@ -61,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/cuffie_easy_it" alt="" /></div>
+      <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/cuffie_easy_it" alt="cuffie" /></div>
     </div>
   </div>
 </header>
