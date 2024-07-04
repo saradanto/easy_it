@@ -56,62 +56,37 @@
             @endforeach
         </tbody>
     </table> --}}
+    @forelse ($articles as $article )
+       <a href="#" class="nav-link">
+        <div class="card mb-3 rounded-5" style="min-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4" style="height: 100px; width: auto;">
+                    <img src="https://picsum.photos/600/600.jpg" style="height: 200px; border-radius: 35px" class="img-fluid p-4" alt="...">
+                </div>
+                <div class="col-md-8 m-0 p-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $article->title}}</h5>
+                        <p class="card-text">Categoria: {{ $article->category->name}}</p>
+                        <p class="card-text"><small class="text-body-secondary">Prezzo: {{ $article->price}}</small></p>
+                        <p class="card-text"><small class="text-body-secondary">Data: {{ $article->created_at}}</small></p>
 
-    <a href="#" class="nav-link">
-        <div class="card mb-3 rounded-5" style="min-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4" style="height: 100px; width: auto;">
-                    <img src="https://picsum.photos/600/600.jpg" style="height: 200px; border-radius: 35px" class="img-fluid p-4" alt="...">
-                </div>
-                <div class="col-md-8 m-0 p-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
         </div>
-    </a>
+    </a> 
+    @empty
+       Nessun articolo inserito 
+    @endforelse
     
-    <a href="#" class="nav-link">
-        <div class="card mb-3 rounded-5" style="min-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4" style="height: 100px; width: auto;">
-                    <img src="https://picsum.photos/600/600.jpg" style="height: 200px; border-radius: 35px" class="img-fluid p-4" alt="...">
-                </div>
-                <div class="col-md-8 m-0 p-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
     
-    <a href="#" class="nav-link">
-        <div class="card mb-3 rounded-5" style="min-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4" style="height: 100px; width: auto;">
-                    <img src="https://picsum.photos/600/600.jpg" style="height: 200px; border-radius: 35px" class="img-fluid p-4" alt="...">
-                </div>
-                <div class="col-md-8 m-0 p-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-    
+
+   
     
 </div>
+ {{ $articles->links()}}
 </div>
 
 </main>
-
+    
 </x-main>
