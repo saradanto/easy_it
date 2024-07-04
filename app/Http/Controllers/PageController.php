@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
-   public function homepage()
+  public function homepage()
   {
      return view('homepage');
   }
