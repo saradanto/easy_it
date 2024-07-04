@@ -55,7 +55,7 @@
 
                 <div class="d-flex justify-content-center">
                   <button  type="submit" data-mdb-button-init
-                    data-mdb-ripple-init class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Registrati</button>
+                    data-mdb-ripple-init class="btn btn-outline-primary me-md-4 rounded-4">Registrati</button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Hai gia un account?  <a href="{{ route('login')}}"
