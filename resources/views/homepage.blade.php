@@ -22,6 +22,23 @@
 
 <div class="container mt-5 d-flex flex-wrap">
 
+  {{-- @for ($i = 0; $i < 4; $i++)   
+    @if (count($articles) > $i)
+
+
+      @else
+      <div class="card rounded-5 border-0 mx-3" style="width: 18rem; height: auto;">
+        <img src="https://picsum.photos/200/200?random=1" class="card-img-top img-fluid rounded-4" alt="...">
+        <div class="card-body">
+          <p class="card-text fw-bold">Categoria</p>
+          <h5 class="card-title fw-bold">Titolo</h5>
+          <p class="card-text">100 €</p>
+        </div>
+      </div>
+    @endif
+  @endfor --}}
+
+
 
       <div class="card rounded-5 border-0 mx-3" style="width: 18rem; height: auto;">
         <img src="https://picsum.photos/200/200?random=1" class="card-img-top img-fluid rounded-4" alt="...">
