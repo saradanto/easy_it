@@ -19,10 +19,10 @@
       </svg>
       
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ourList">
         <li class="nav-item">
           <a class="nav-link " href="{{route('homepage')}}">Home</a>
@@ -36,7 +36,7 @@
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link " href="{{route('login')}}">login</a>
+          <a class="nav-link " href="{{route('login')}}">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('register')}}">Register</a>
@@ -50,7 +50,7 @@
     </div>
   </div>
 </nav>
-<header class="ourHeader py-5">
+<header class="ourBgImage py-5">
   <div class="container px-5">
     <div class="row gx-5 align-items-center justify-content-center">
       <div class="col-lg-8 col-xl-7 col-xxl-6">
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/cuffie_easy_it" alt="cuffie" /></div>
+      <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/cuffie_easy_it" alt="" /></div>
     </div>
   </div>
 </header>
