@@ -8,19 +8,15 @@ use App\Models\Article;
 class PageController extends Controller
 {
    public function homepage()
-  {    
-      
+  {
+
       $articles = Article::take(6)->orderBy( 'created_at', 'desc')->get();
-     
+
      return view('homepage', compact('articles'));
 
 
   }
 
-  public function notice ()
-  {
-     return view ('notice');
-  }
 
   public function contact()
   {
