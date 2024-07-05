@@ -10,15 +10,16 @@ use Livewire\Component;
 class CreateArticleForm extends Component
 {
 
-    #[Validate('required|min:5')]
+    #[Validate('required|min:5|max:30')]
     public $title;
-    #[Validate('required|min:10')]
+    #[Validate('required|min:10|max:500')]
     public $description;
-    #[Validate('required|numeric')]
+    #[Validate('required|max:100000000|decimal')]
     public $price;
     #[Validate('required')]
     public $category_id;
     public $article;
+
 
     public function store(){
 
@@ -56,8 +57,10 @@ class CreateArticleForm extends Component
     }
 
 
+
     public function render()
     {
+
         return view('livewire.create-article-form');
     }
 }
