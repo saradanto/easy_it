@@ -8,7 +8,7 @@
                     <h1 class="display-5 fw-bolder mb-2">Aquista e vendi i tuoi articoli preferiti in modo Easy.it</h1>
                     <p class="lead fw-light text-50 mb-4">Qui puoi inserire e gestire i tuoi annunci!</p>
                     <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                      <a href="{{route('article.create')}}" class="btn btn-outline-primary btn-lg me-md-4 rounded-5 px-4">Inserisci un articolo</a>
+                      <a href="{{route('article.create')}}" class="btn btn-outline-primary btn-lg me-md-4 rounded-5 px-4">Inserisci un annuncio</a>
                       <a class="btn btn-outline-dark btn-lg px-4 rounded-5" href="{{route('notice')}}">Cerca annuncio</a>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
 
 @forelse ($articles as $article)
 <div class="card rounded-5 border-0 mx-5 my-5" style="width: 20rem; height: auto;">
-  <img src="https://picsum.photos/200/200?random=1" class="card-img-top img-fluid rounded-4" alt="...">
+  <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-4" alt="...">
   <div class="card-body">
     <p class="card-text fw-bold">{{$article->category->name}}</p>
     <h5 class="card-title fw-bold">{{$article->title}}</h5>
