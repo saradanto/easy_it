@@ -1,4 +1,4 @@
-<nav class="ourNavbar navbar navbar-expand-lg bg-transparent">
+<nav id="myNavbar" class="ourNavbar navbar navbar-expand-lg bg-transparent">
   <div class="container">
     <a class="navbar-brand" href="{{route('homepage')}}">
       <svg width="auto" height="40px" viewBox="0 0 151 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,17 +44,17 @@
         </li>
       @else
         <div class="nav-item ms-auto">
-          <span class="nav-link">Benvenuto, <span class="fw-bolder">{{ Auth::user()->name }}</span></span>
+          <a href="{{route('article.index')}}" class="btn btn-outline-dark rounded-5"><i class="bi bi-house-door"></i> Benvenuto, <span class="fw-bolder">{{ Auth::user()->name }}</span></a>
         </div>
         <div class="nav-item ms-3">
           <form action="{{ route('logout')}}" method="POST">
             @csrf
-            <button class="nav-link text-danger" type="submit">Logout</button>
+            <button class="btn btn-outline-danger rounded-5" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
           </form>
         </div>
       </ul>
       @endguest
-        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-5"><i class="bi bi-plus-circle me-2"></i>Inserisci un articolo</a></span>
+        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-5"><i class="bi bi-plus-circle me-2"></i>Inserisci un annuncio</a></span>
     </div>
   </div>
 </nav>
