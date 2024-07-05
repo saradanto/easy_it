@@ -72,8 +72,17 @@
             @endforeach
         </tbody>
     </table> --}}
+    
+      
+    @if (session()->has('status'))
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+      </div>
+        
+    @endif
+    
     @forelse ($articles as $article )
-       <a href="#" class="nav-link">
+       <a href="{{route('article.show', ['article' => $article])}}" class="nav-link">
         <div class="card mb-3 rounded-5" style="min-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4" style="height: 100px; width: auto;">

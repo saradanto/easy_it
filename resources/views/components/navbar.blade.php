@@ -25,36 +25,36 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ourList">
         <li class="nav-item">
-          <a class="nav-link " href="{{route('homepage')}}">Home</a>
+          <a class="nav-link fw-bold" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('notice')}}">Annunci</a>
+          <a class="nav-link fw-bold" href="{{route('notice')}}">Annunci</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('contact')}}">Contatti</a>
+          <a class="nav-link fw-bold" href="{{route('contact')}}">Contatti</a>
         </li>
       </ul>
       @guest  
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link " href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i> login</a>
+          <a class="nav-link" href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i> login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i> Register</a>
         </li>
       @else
         <div class="nav-item ms-auto">
-          <a href="{{route('article.index')}}" class="btn btn-outline-dark rounded-5"><i class="bi bi-house-door"></i> Benvenuto, <span class="fw-bolder">{{ Auth::user()->name }}</span></a>
+          <a href="{{route('article.index')}}" class="nav-link"><i class="bi bi-house-door"></i> Ciao, <span class="fw-bolder">{{ Auth::user()->name }}</span></a>
         </div>
         <div class="nav-item ms-3">
           <form action="{{ route('logout')}}" method="POST">
             @csrf
-            <button class="btn btn-outline-danger rounded-5" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
+            <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
           </form>
         </div>
       </ul>
       @endguest
-        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-5"><i class="bi bi-plus-circle me-2"></i>Inserisci un annuncio</a></span>
+        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-5 px-4 py-2"><i class="bi bi-plus-circle me-2"></i>Inserisci un annuncio</a></span>
     </div>
   </div>
 </nav>
