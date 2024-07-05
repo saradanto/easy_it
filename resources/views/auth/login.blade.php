@@ -15,7 +15,7 @@
 
                   <div data-mdb-input-init class="form-outline    mb-4">
                     <label for="email">Inserisci la tua email</label>
-                    <input type="email" class="form-control border-top-0 border-end-0 border-start-0  " id="email" name="email" placeholder="name@example.com" required>
+                    <input  type="email" class="form-control border-0 border-bottom" id="email" name="email" placeholder="name@example.com" required>
                   </div>  
                 
                  
