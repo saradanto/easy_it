@@ -13,6 +13,19 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+/* .btn-outline-primary {
+    background-color: ;
+} */
+
+.bg-white {
+    transition: all 500ms;
+    box-shadow: 0px 0px 8px #000;
+}
+
+.bg-transparent {
+    transition: all 500ms;
+}
+
 .ourNavbar {
     position: fixed;
     top: 0px;
@@ -40,6 +53,7 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+
 
 /* .ourBgImage::after {
     content: '';
@@ -73,7 +87,28 @@ body {
 
 
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
-    }
+}
+
+.accordion-item, .accordion-item:focus, .accordion-item:active,
+.accordion-header, .accordion-header:focus, .accordion-header:active,
+.accordion-button, .accordion-button:focus, .accordion-button:active {
+  outline: none !important;
+}
+
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.accordion-button:not(.collapsed){
+    box-shadow: none;
+    background-color: transparent;
+    border-bottom: 1px solid #8f8f8f57;
+    color: #000;
+}
+
+
 /* a {
     text-decoration: none;
     -webkit-transition: .3s all ease;

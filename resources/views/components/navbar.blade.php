@@ -1,4 +1,4 @@
-<nav class="ourNavbar navbar navbar-expand-lg bg-transparent">
+<nav id="myNavbar" class="ourNavbar navbar navbar-expand-lg bg-transparent">
   <div class="container">
     <a class="navbar-brand" href="{{route('homepage')}}">
       <svg width="auto" height="40px" viewBox="0 0 151 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,42 +19,42 @@
       </svg>
       
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ourList">
         <li class="nav-item">
-          <a class="nav-link " href="{{route('homepage')}}">Home</a>
+          <a class="nav-link fw-bold" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('notice')}}">Annunci</a>
+          <a class="nav-link fw-bold" href="{{route('notice')}}">Annunci</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('contact')}}">Contatti</a>
+          <a class="nav-link fw-bold" href="{{route('contact')}}">Contatti</a>
         </li>
       </ul>
       @guest  
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link " href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i> login</a>
+          <a class="nav-link" href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i> login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i> Register</a>
         </li>
       @else
         <div class="nav-item ms-auto">
-          <span class="nav-link">Benvenuto, <span class="fw-bolder">{{ Auth::user()->name }}</span></span>
+          <a href="{{route('article.index')}}" class="nav-link"><i class="bi bi-house-door"></i> Ciao, <span class="fw-bolder">{{ Auth::user()->name }}</span></a>
         </div>
         <div class="nav-item ms-3">
           <form action="{{ route('logout')}}" method="POST">
             @csrf
-            <button class="nav-link text-danger" type="submit">Logout</button>
+            <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
           </form>
         </div>
       </ul>
       @endguest
-        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-5"><i class="bi bi-plus-circle me-2"></i>Inserisci un articolo</a></span>
+        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-5 px-4 py-2"><i class="bi bi-plus-circle me-2"></i>Inserisci un annuncio</a></span>
     </div>
   </div>
 </nav>
