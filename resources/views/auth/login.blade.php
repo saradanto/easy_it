@@ -16,21 +16,21 @@
                   <div data-mdb-input-init class="form-outline    mb-4">
                     <label for="email">Inserisci la tua email</label>
                     <input  type="email" class="form-control border-0 border-bottom" id="email" name="email" placeholder="name@example.com" required>
-                  </div>  
-                
-                 
+                  </div>
+
+
 
                  <div data-mdb-input-init class="form-outline mb-4">
                     <label for="password">Password</label>
-                   <input type="password" class="form-control" name="password" id="Password" placeholder="Password" required>
-                  </div>  
-                
-                 
+                   <input type="password" class="form-control" name="password" id="Password" placeholder=" Password" required>
+                  </div>
+
+
                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary me-md-4 rounded-4" type="submit">Login</button>
                   <a href="{{ route('register') }}" class="btn  text-dark">Non sei registrato?Clicca qui</a>
                 </form>
               </div>
-            
+
             </div>
           </div>
         </div>
@@ -40,4 +40,4 @@
   </section>
 
 
-</x-main> 
+</x-main>

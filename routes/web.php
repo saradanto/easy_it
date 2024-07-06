@@ -14,3 +14,5 @@ Route::get('/juri', [PageController::class, 'juri'])->name('juri');
 Route::resource('article', ArticleController::class)->middleware('auth');
 
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
+
+Route::get('/prova', [ArticleController::class, 'paginaProva'])->name('paginaProva');

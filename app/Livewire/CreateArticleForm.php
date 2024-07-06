@@ -14,7 +14,7 @@ class CreateArticleForm extends Component
     public $title;
     #[Validate('required|min:10|max:500')]
     public $description;
-    #[Validate('required|max:100000000|decimal')]
+    #[Validate('required|max:100000000|decimal:2')]
     public $price;
     #[Validate('required')]
     public $category_id;
