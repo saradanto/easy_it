@@ -62,4 +62,9 @@ class ArticleController extends Controller
         return view('article.paginaprova', compact('articles'));
     }
 
+    public function filtroScout(){
+
+        return view('article.filtroscout');
+    }
+
 }
