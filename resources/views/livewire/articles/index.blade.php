@@ -19,8 +19,8 @@
                 <div
                 class="align-middle gap-2 d-flex justify-content-between mb-5">
                 <h3 class="fw-bold">I tuoi articoli</h3>
-                <form class="d-flex" wire:model.live="search">
-                <input class="form-control me-2" name="search"
+                <form class="d-flex" >
+                <input wire:model.live="search" class="form-control me-2" name="search"
                 type="search" placeholder="Cerca Articolo"
                 aria-label="Search">
                 </form>
