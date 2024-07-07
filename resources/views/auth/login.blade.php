@@ -33,7 +33,7 @@
                    <div class="d-grid gap-2 col-6 mx-auto">
                     <button class="btn btn-dark" type="submit">Login</button>
                     <p class="text-center fw-bold">o</p>
-                    <a href="" class="btn btn-dark bg-transparent text-black fw-bold " ><i class="bi bi-google"> Accedi con Google</i></a>
+                    <a href="{{ route('redirectToGoogle')}}" class="btn btn-dark bg-transparent text-black fw-bold " ><i class="bi bi-google"> Accedi con Google</i></a>
                   </div>
                    
                  
