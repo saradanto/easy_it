@@ -54,7 +54,7 @@
         </div>
       </ul>
       @endguest
-        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-5 px-4 py-2"><i class="bi bi-plus-circle me-2"></i>Inserisci un annuncio</a></span>
+        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">Crea annuncio</a></span>
     </div>
   </div>
 </nav>
