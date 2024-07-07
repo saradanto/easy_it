@@ -10,7 +10,7 @@ let myNavbar = document.querySelector('#myNavbar');
 window.addEventListener('scroll', () => {
     let scrolled = window.scrollY;
     if (scrolled > 0) {
-        myNavbar.classList.add('bg-white');
+        myNavbar.classList.add('bg-light');
         myNavbar.classList.remove('bg-transparent');
         // logoCustom.classList.add('logo-custom');
 
@@ -26,7 +26,7 @@ window.addEventListener('scroll', () => {
         // })
 
     } else {
-        myNavbar.classList.remove('bg-white')
+        myNavbar.classList.remove('bg-light')
         myNavbar.classList.add('bg-transparent')
         // logoCustom.classList.remove('logo-custom');
         // hamburger.style.color = 'var(--black)';
