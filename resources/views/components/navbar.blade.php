@@ -44,7 +44,14 @@
         </li>
       @else
         <div class="nav-item ms-auto">
-          <a href="{{route('article.index')}}" class="nav-link"><i class="bi bi-house-door"></i> Ciao, <span class="fw-bolder">{{ Auth::user()->name }}</span></a>
+          <a href="{{route('article.index')}}" class="nav-link">
+            @if (Auth::user()->is_revisor)
+            <i class="bi bi-shield-check text-success"></i>
+            @else
+            <i class="bi bi-house-door"></i> 
+            @endif
+            <span class="fw-bolder">{{ Auth::user()->name }}</span>
+          </a>
         </div>
         <div class="nav-item ms-3">
           <form action="{{ route('logout')}}" method="POST">
