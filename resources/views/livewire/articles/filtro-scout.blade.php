@@ -14,7 +14,13 @@
                         </div>
                     </div>
                     @empty
+                    <div class=" mt-2  bg-white border rounded shadow-sm">
+                        <div class="p-2 border-bottom">
 
+                            <h5 class="mb-1">Nessun risultato trovato</h5>
+                            </a>
+                        </div>
+                    </div>
 
                 @endforelse
             @endif
