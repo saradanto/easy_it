@@ -15,8 +15,8 @@ class FiltroScout extends Component
     {
         if($this->query){
             $this->articles = Article::search($this->query)->get();
-        } else if(!$this->query){
-
+        } else {
+            $this->articles = null;
         }
 
         return view('livewire.articles.filtro-scout');
