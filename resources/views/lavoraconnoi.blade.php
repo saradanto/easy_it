@@ -8,7 +8,7 @@
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
                         <h1 class="display-5 fw-bolder mb-2">Lavora con noi</h1>
-                        <p class="lead fw-light text-50 mb-4">Insersci i dati e invia la tua richiesta</p>
+                        <p class="lead fw-light text-50 mb-4">Inserisci i dati e invia la tua richiesta</p>
                     </div>
                 </div>
             </div>
