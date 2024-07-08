@@ -41,7 +41,7 @@
       <div class="col mb-3">
         <h5>Informazioni</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Lavora con noi</a></li>
+          <li class="nav-item mb-2"><a href="{{route('lavoraconnoi')}}" class="nav-link p-0 text-body-secondary">Lavora con noi</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
