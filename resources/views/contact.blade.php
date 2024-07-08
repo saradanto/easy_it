@@ -1,16 +1,71 @@
 <x-main>
 
-    <header class="" style="background-color: #CBE5EE; padding: 130px 0px;">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center justify-content-center">
-                <div class="col-lg-8 col-xl-7 col-xxl-6">
-                    <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder mb-2">Contatti</h1>
-                        <p class="lead fw-light text-50 mb-4">Qui puoi inserire i tuoi dati e inviarci un feedback o chiedere assistenza</p>
+    <div>
+
+        <header class="" style="background-color: #CBE5EE; padding: 130px 0px;">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder mb-2">Lavora con noi</h1>
+                            <p class="lead fw-light text-50 mb-4">Insersci i dati e invia la tua richiesta</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </header>
+        
+        <div class="container my-5 py-5 d-flex justify-content-center">
+            <div class="col-12 border-2 bg-white p-5 rounded-4" style="width: 1000px"> 
+                <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i>Torna indietro</a>
+            
+            
+            
+            <form wire:submit="store">
+                <h3 class="h3   mt-5 pt-3">Lavora con noi</h3>
+                <p class="mb-4 fw-light">Compila il form e inviaci la tua richiesta</p>
+        
+                <div class="row">
+                
+                        {{-- input titolo --}}
+                        <div class="form-floating mb-4 col">
+                            <input class="form-control border-2" wire:model.blur="Nome" type="text" id="Nome">
+                            <label class="ms-2" for="Nome">Nome</label>
+                           
+                        </div>
+        
+                        {{-- input prezzo --}}
+                        <div class="form-floating mb-4 col">
+                            <input class="form-control border-2" wire:model.blur="email" id="email"></input>
+                            <label class="ms-2" for="email">Email</label>
+                           
+                        </div>
+        
+                </div>
+        
+                {{-- input descrizione --}}
+                <div class="form-floating mb-5">
+                    <textarea class="form-control border-2" wire:model.blur="description" style="height: 180px" rows="5"></textarea>
+                    <label for="description" id="description">Inserisci una descrizione...</label>
+                    
+                </div>
+               
+               
+                    
+           
+        
+            
+        
+               
+                  
+        
+                <div class="d-grid d-flex justify-content-center">
+                    <button class="btn btn-dark rounded-3 mb-5 px-5 py-2" type="submit">Invia</button>
+                </div>
+        
+            </form>
         </div>
-    </header>
+        </div>
+        </div>
 
 </x-main>
