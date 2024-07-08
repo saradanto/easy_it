@@ -14,7 +14,7 @@ class FiltroScout extends Component
     public function render()
     {
         if($this->query){
-            $this->articles = Article::search($this->query)->get();
+            $this->articles = Article::search($this->query)->where('is_accepted', true)->get();
         } else {
             $this->articles = null;
         }
