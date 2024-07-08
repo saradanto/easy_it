@@ -5,7 +5,7 @@
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder mb-2">Lista annunci</h1>
+                        <h1 class="display-5 fw-bolder mb-2">Ciao {{ Auth::user()->name }}, ecco i tuoi annunci!</h1>
                         {{-- <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
                           <a href="{{route('article.create')}}" class="btn btn-outline-primary btn-lg me-md-4 rounded-5 px-4">Inserisci un articolo</a>
                           <a class="btn btn-outline-dark btn-lg px-4 rounded-5" href="{{route('notice')}}">Cerca annuncio</a>
