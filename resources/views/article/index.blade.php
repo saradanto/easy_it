@@ -156,7 +156,7 @@
                         <p class="ms-5">Creato il</p>
                     </div>
                 </div>
-            </a>
+                </a>
 
 
                 {{-- @forelse ($articles as $article )
