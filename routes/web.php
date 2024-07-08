@@ -21,11 +21,11 @@ Route::get('/prova', [ArticleController::class, 'paginaProva'])->name('paginaPro
 Route::get('filtroscout', [ArticleController::class, 'filtroscout'])->name('filtroscout');
 
 // socialite google
-Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle'])->name('redirectToGoogle'); 
+Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle'])->name('redirectToGoogle');
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback'])->name('handleCallback');
 
 // revisore
-Route::get('revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('revisor/index', [RevisorController::class, 'index'])->middleware('IsRevisor')->name('revisor.index');
 Route::get('lavoraconnoi', [RevisorController::class, 'lavoraconnoi'])->name('lavoraconnoi');
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
