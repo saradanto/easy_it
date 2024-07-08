@@ -27,4 +27,5 @@
   
   
 </body>
+<script src="https://kit.fontawesome.com/5de7b6e936.js" crossorigin="anonymous"></script>
 </html>

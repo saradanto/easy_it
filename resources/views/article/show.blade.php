@@ -47,8 +47,9 @@
                       </div>
                 </div>
                 <div class="card-body ">
-                  <p class="card-text">{{$article->description}}</p>
-                  <p class="card-text">{{$article->category->name}}</p>
+                  <p class="card-text"><strong>Descrizione:</strong> {{$article->description}}</p>
+                  <p class="card-text"><strong>Categoria:</strong>  {{$article->category->name}}</p>
+                  <p><strong>Autore: </strong>{{Auth::user()->name }}</p>
                   <a href="#" class="card-link">Card link</a>
                   <a href="#" class="card-link">Another link</a>
                 </div>

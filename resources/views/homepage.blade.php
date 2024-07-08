@@ -8,8 +8,8 @@
             <h1 class="display-5 fw-bolder mb-2">Aquista e vendi i tuoi articoli preferiti in modo Easy.it</h1>
             <p class="lead fw-light text-50 mb-4">Qui puoi inserire e gestire i tuoi annunci!</p>
             <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
-              <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-5 px-4">Inserisci un annuncio</a>
-              <a class="btn btn-dark btn-lg px-4 rounded-5" href="{{route('notice')}}">Cerca annuncio</a>
+              <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-3 px-4">Inserisci un annuncio</a>
+              <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">Cerca annuncio</a>
             </div>
           </div>
         </div>
@@ -18,6 +18,17 @@
     </div>
   </header>
   
+  <div class="container d-flex justify-content-center align-items-center flex-column mt-5 bg-white p-5 rounded-3 shadow">
+    <h2 class="h2 fw-bold text-center mb-4">Cerca</h2>
+    <form class="d-flex w-50 input-group flex-nowrap border-2">
+      <span class="input-group-text border-end-0 bg-transparent" id="addon-wrapping"><i class="bi bi-search"></i></span>
+      <input wire:model.live="search" class="form-control me-2 border-start-0 rounded-3" name="search"
+      type="search" placeholder="Cerca..."
+      aria-label="Search" aria-describedby="addon-wrapping">
+      <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">Cerca annuncio</a>
+    </form>
+  </div>
+
   <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">Categorie</h2>
   <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
     @forelse ($categories as $category)

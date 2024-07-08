@@ -57,4 +57,14 @@ class ArticleController extends Controller
         return view('article.byCategory', ['articles' => $category->articles, 'category'=> $category]);
     }
 
+    public function paginaProva(Article $article){
+        $articles = Article::all();
+        return view('article.paginaprova', compact('articles'));
+    }
+
+    public function filtroScout(){
+
+        return view('article.filtroscout');
+    }
+
 }
