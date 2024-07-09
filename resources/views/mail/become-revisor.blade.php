@@ -6,7 +6,7 @@
         <p>Nome: {{ $user->name}}</p>
         <p>Email: {{ $user->email}}</p>
         <p>Se vuoi renderl* revisor, clicca qui:</p>
-        <a href="">Rendu revisore</a>
+        <a href="{{ route('make.revisor', compact('user'))}}">Rendi revisore</a>
 
 
     </div>
