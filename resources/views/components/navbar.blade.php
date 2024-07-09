@@ -46,7 +46,7 @@
         <div class="nav-item ms-auto">
           <a href="{{route('article.index')}}" class="nav-link">
             @if (Auth::user()->is_revisor)
-            <i class="bi bi-shield-check text-success"></i>
+            <i class="bi bi-shield-fill-check text-success"></i>
             @else
             <i class="bi bi-house-door"></i> 
             @endif
