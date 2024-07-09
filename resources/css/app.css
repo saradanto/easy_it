@@ -353,7 +353,7 @@ input[type=file]::file-selector-button:hover {
     object-fit: cover;
 }
 
-.swiper-navigation, .swiper-pagination {
+/* .swiper-navigation, .swiper-pagination {
     color: var(--swiper-navigation-color);
     color: var(--swiper-pagination-color);
-}
+} */

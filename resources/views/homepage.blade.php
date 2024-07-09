@@ -17,7 +17,13 @@
       </div>
     </div>
   </header>
-  
+
+  @if (session()->has('message'))
+    <div class="alert alert-success text-center shadow rounded">
+      {{session('message')}}
+    </div>
+  @endif
+
   @livewire('articles.filtro-scout')
 
     <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">Categorie</h2>
