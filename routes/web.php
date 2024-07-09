@@ -29,3 +29,4 @@ Route::get('revisor/index', [RevisorController::class, 'index'])->middleware('Is
 Route::get('lavoraconnoi', [RevisorController::class, 'lavoraconnoi'])->name('lavoraconnoi');
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
+Route::get('/revisor/request' , [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');

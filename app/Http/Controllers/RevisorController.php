@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
@@ -27,5 +30,8 @@ class RevisorController extends Controller
         return view('lavoraconnoi');
     }
 
-
+    public function becomeRevisor(){
+        Mail::to('dantogas@gmail.com')->send(new BecomeRevisor(Auth::user()));
+        return redirect()->route('homepage')->with('message', 'Complimenti, Hai richiesto di diventare revisor');
+    }
 }
