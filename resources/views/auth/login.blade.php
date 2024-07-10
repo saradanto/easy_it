@@ -41,7 +41,9 @@
   
                     <p class="text-center text-muted mt-3 mb-0">Non sei registrato?  <a href="{{ route('register')}}"
                       class="fw-bold text-body"><u>Clicca qui</u></a></p>
-                     
+                      <p class="text-center text-muted mt-3 mb-0">Password dimenticata  <a href="{{ route('password.request')}}"
+                        class="fw-bold text-body"><u>Clicca qui</u></a></p>
+                </form>     
               </div>
       
             </div>
@@ -49,6 +51,7 @@
         </div>
       </div>
     </div>
+    
       
   </section>
 </x-main>
