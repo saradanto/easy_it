@@ -20,7 +20,14 @@
       
     </a>
     <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
+      {{-- <span class="navbar-toggler-icon "> --}}
+      {{-- </span> --}}
+        <div class="nav-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ourList">
