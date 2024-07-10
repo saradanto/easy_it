@@ -19,8 +19,15 @@
       </svg>
       
     </a>
-    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
+    <button class="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      {{-- <span class="navbar-toggler-icon "> --}}
+      {{-- </span> --}}
+        <div class="nav-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ourList">
@@ -65,3 +72,26 @@
     </div>
   </div>
 </nav>
+
+
+
+{{-- <script>
+  // hamburger menu
+let hamburger = document.querySelector('.nav-hamburger');
+hamburger.addEventListener("click", function() {
+    document.body.classList.toggle('menu_open');
+});
+
+let myNavbar = document.querySelector('#myNavbar');
+// effetto onscroll, cambia la navbar e i vari link
+window.addEventListener('scroll', () => {
+  let scrolled = window.scrollY;
+  if (scrolled > 0) {
+    myNavbar.classList.add('bg-light');
+    myNavbar.classList.remove('bg-transparent');
+  } else {
+    myNavbar.classList.remove('bg-light')
+    myNavbar.classList.add('bg-transparent')
+  }
+});
+</script> --}}

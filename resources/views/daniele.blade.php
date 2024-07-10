@@ -47,9 +47,9 @@
                     </div>
                     {{-- </div> --}}
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" >
                     <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <div class="rating">
+                    <div class="rating w-25">
                         <input type="radio" name="rating" id="r1">
                         <label for="r1"></label>
                         <input type="radio" name="rating" id="r2">
@@ -66,9 +66,76 @@
                     <hr>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos optio repudiandae doloribus itaque vel quo deserunt modi perferendis. Dolor mollitia beatae delectus reprehenderit laborum consequatur facilis reiciendis, facere minus ipsa.</p>
                 </div>
-                {{-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> --}}
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            
+            
+            {{-- <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div> --}}
+            
+            
+            {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> --}}
         </body>
+        
+        {{-- <script>
+            /* SWIPER */
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                loop: true,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
+            
+            //* MY-SWIPER 
+            
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+            
+        </script> --}}
     </x-main>
