@@ -10,9 +10,9 @@ use Livewire\Component;
 class CreateArticleForm extends Component
 {
 
-    #[Validate('required|min:5|max:30')]
+    #[Validate('required|min:5|max:200')]
     public $title;
-    #[Validate('required|min:10|max:500')]
+    #[Validate('required|min:10|max:1000')]
     public $description;
     #[Validate('required|max:100000000|decimal:2')]
     public $price;

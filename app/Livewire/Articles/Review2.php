@@ -11,6 +11,9 @@ class Review2 extends Component
     public $article;
     public $showModal = false;
     public $actionType;
+    public $lastReviewedArticle = null;
+
+
 
     public function mount()
     {
@@ -19,7 +22,9 @@ class Review2 extends Component
 
     public function loadArticle()
     {
-        $this->article = Article::where('is_accepted', null)->first();
+        if (!$this->lastReviewedArticle) {
+            $this->article = Article::where('is_accepted', null)->latest()->first();
+        }
     }
 
     public function openModal($action)
@@ -43,10 +48,24 @@ class Review2 extends Component
             $message = "Hai rifiutato l'articolo {$this->article->title}";
         }
 
+        $this->lastReviewedArticle = $this->article;
         $this->closeModal();
         $this->loadArticle();
         session()->flash('message', $message);
     }
+
+    public function annulla()
+{
+    if ($this->lastReviewedArticle) {
+        $this->lastReviewedArticle->is_accepted = null;
+        $this->lastReviewedArticle->save();
+
+        session()->flash('message', "L'articolo {$this->lastReviewedArticle->title} è stato riportato allo stato pending.");
+        $this->lastReviewedArticle = null;
+        $this->loadArticle();
+    }
+}
+
 
 
     public function render()

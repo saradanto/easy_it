@@ -48,7 +48,7 @@ class ArticleController extends Controller
     public function notice ()
     {
     $categories = Category::all();
-    $articles = Article::all();
+    $articles = Article::where('is_accepted', true)->get();
     return view ('notice', compact('categories', 'articles'));
     }
 
