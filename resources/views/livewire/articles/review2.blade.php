@@ -7,6 +7,11 @@
 
 
 
+    @if($lastReviewedArticle)
+    <button type="button" class="btn btn-warning " wire:click="annulla">Annulla ultima azione</button>
+    @endif
+
+
     @if ($article)
 
     <div class="row justify-content-center pt-5">
@@ -39,6 +44,7 @@
                     <button wire:click="openModal('reject')" class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
                     <button wire:click="openModal('accept')" class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
                 </div>
+
             </div>
         </div>
 
@@ -59,6 +65,7 @@
                         <button type="button" class="btn btn-secondary" wire:click="closeModal">Annulla</button>
                         <button type="button" class="btn btn-primary" wire:click="confirmAction">Conferma</button>
                     </div>
+
                 </div>
             </div>
         </div>
