@@ -76,6 +76,7 @@
                                 
                                 
                                 @forelse ($articles as $article )
+                                    
                                 <a href="{{route('article.show', ['article' => $article])}}" class="nav-link">
                                     <div class="card mb-3 rounded-4" style="min-width: 16rem; height: 10rem;">
                                         <div class="row g-0">
@@ -94,6 +95,7 @@
                                         </div>
                                     </div>
                                 </a>
+                                
                                 @empty
 
                                 <div class="text-center mt-5 pt-5">

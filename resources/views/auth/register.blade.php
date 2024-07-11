@@ -28,7 +28,7 @@
                       <div class="mb-3">
                           <label class="h5  form-label" for="email">Email</label>
                         <div class="input-group ">
-                          <input type="email" class="form-control border-end-0" value="{{old('email')}}" placeholder="email" name="email" id="email" required>
+                          <input type="email" class="form-control border-end-0 rounded-start" value="{{old('email')}}" placeholder="email" name="email" id="email" required>
                           <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-envelope-at"></i></span>
                         </div>
                       </div>
@@ -43,7 +43,7 @@
                        <div class="mb-3">
                          <label class="h5  form-label" for="password">Password</label>
                          <div class="input-group ">
-                            <input type="password" class="form-control border-end-0" placeholder="password" name="password" id="password" >
+                            <input type="password" class="form-control border-end-0 rounded-start" placeholder="password" name="password" id="password" >
                            <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-lock"></i></span>
                          </div>
                        </div>
@@ -62,8 +62,8 @@
                       </div>
                   
                   
-                  <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-dark " type="submit">Registrati</button>
+                  <div class="d-grid gap-2 col-12 mx-auto mt-5">
+                    <button class="btn btn-dark rounded-3" type="submit">Registrati</button>
                     
                   </div>
       

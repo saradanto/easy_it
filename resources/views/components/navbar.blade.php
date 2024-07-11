@@ -30,7 +30,7 @@
         </div>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ourList">
+      <ul class="navbar-nav ourList ms-4">
         <li class="nav-item">
           <a class="nav-link fw-bold" href="{{route('homepage')}}">Home</a>
         </li>
@@ -50,6 +50,30 @@
           <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i> Register</a>
         </li>
       @else
+      {{-- <li class="nav-item dropdown ms-auto me-3">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Profilo
+        </a>
+        <ul class="dropdown-menu mt-1 border-0 bg-transparent">
+          <div class="nav-item my-3 border-0 ">
+            <a href="{{route('article.index')}}" class="nav-link">
+              @if (Auth::user()->is_revisor)
+              <i class="bi bi-shield-fill-check text-success"></i>
+              @else
+              <i class="bi bi-house-door"></i> 
+              @endif
+              <span class="fw-bolder">{{ Auth::user()->name }}</span>
+            </a>
+          </div>
+          <div class="nav-item my-3">
+            <form action="{{ route('logout')}}" method="POST">
+              @csrf
+              <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
+            </form>
+          </div>
+        </ul>
+      </li> --}}
+
         <div class="nav-item ms-auto">
           <a href="{{route('article.index')}}" class="nav-link">
             @if (Auth::user()->is_revisor)
