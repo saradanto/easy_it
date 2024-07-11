@@ -12,6 +12,10 @@ Route::get('/notice', [ArticleController::class, 'notice'])->name('notice');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/daniele', [PageController::class, 'daniele'])->name('daniele');
 Route::get('/juri', [PageController::class, 'juri'])->name('juri');
+Route::post('/send', [PageController::class, 'send'])->name('send');
+
+
+
 
 Route::resource('article', ArticleController::class)->middleware('auth');
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
