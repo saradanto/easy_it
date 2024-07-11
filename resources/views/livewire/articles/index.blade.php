@@ -5,18 +5,18 @@
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
                         <h1 class="display-5 fw-bolder mb-2">Ciao {{Auth::user()->name}}, ecco i tuoi annunci</h1>
-                        
+
                     </div>
                 </div>
             </div>
         </header>
-        
+
         <main class="container mt-5 pt-3">
             @if (session()->has('status'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-warning" role="alert">
                 {{ session('status') }}
             </div>
-            
+
             @endif
             <div class="d-flex justify-content-between">
                 <h3 class="fw-bold h3">I tuoi articoli</h3>
@@ -70,13 +70,13 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                             </div>
                             <div class="col-12 col-md-9">
-                                
-                                
+
+
                                 @forelse ($articles as $article )
-                                    
+
                                 <a href="{{route('article.show', ['article' => $article])}}" class="nav-link">
                                     <div class="card mb-3 rounded-4" style="min-width: 16rem; height: 10rem;">
                                         <div class="row g-0">
@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                
+
                                 @empty
 
                                 <div class="text-center mt-5 pt-5">
@@ -104,24 +104,23 @@
                                 </div>
 
                                 @endforelse
-                                
-                                
-                                
-                                
-                                
+
+
+
+
+
                                 {{ $articles->links()}}
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-            
+
+
+
+
+
         </main>
-        
+
     </div>
-    

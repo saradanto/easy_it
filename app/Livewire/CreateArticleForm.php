@@ -37,7 +37,7 @@ class CreateArticleForm extends Component
 
 
 
-        session()->flash('status', 'Prodotto aggiunto con successo.');
+        session()->flash('status', 'Articolo in fase di revisione.');
 
 
         $this->cleanForm();
