@@ -21,14 +21,18 @@
                             <label class="h5  form-label" for="password">Password</label>
                             <div class="input-group ">
                                 <input type="password" class="form-control border-end-0" placeholder="password" name="password" id="password" required>
-                                <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-person"></i></span>
+                                <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-lock"></i></span>
                             </div>
-                            @error('password')
-                              <span>{{ $message}}</span>
-                              
-                            @enderror
+                           
+                            <div class="mb-3">
+                              <label class="h5  form-label" for="password">Conferma Password</label>
+                              <div class="input-group ">
+                               <input type="password" class="form-control border-end-0" placeholder="password" name="password_confirmation" id="password" >
+                               <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-lock"></i></span>
+                              </div>
+                            </div>
                             <div class="d-grid gap-2 col-6 mx-auto">
-                                <button class="btn btn-dark" type="submit">Richiedi</button>
+                                <button class="btn btn-dark" type="submit">Conferma</button>
                             </div>
                        
                         </div>

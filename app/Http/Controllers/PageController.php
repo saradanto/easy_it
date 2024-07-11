@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Mail\ContactMail;
 use App\Models\Article;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -31,5 +33,23 @@ class PageController extends Controller
   {
     return view('juri');
   }
+
+  public function send(Request $request){
+    $request->validate([
+      'name' => 'required',
+      'email' => 'required|email',
+      'description' => 'required',
+    ]);
+
+    $data =[
+      'nome' => $request->name,
+      'email' => $request->input('email'),
+      'messaggio' => $request->description
+    ];
+    Mail::to('dantogas@gmail.com')->send(new ContactMail($data) );
+    return redirect()->route('homepage');
+  }
+
+
 
 }
