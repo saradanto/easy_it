@@ -6,11 +6,7 @@
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
                         <h1 class="display-5 fw-bolder mb-2">Annunci</h1>
-                        <p class="lead fw-light text-50 mb-4">Qui puoi inserire e gestire i tuoi annunci!</p>
-                        <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                            <a href="{{route('article.create')}}" class="btn btn-outline-primary btn-lg me-md-4 rounded-5 px-4">Inserisci un annuncio</a>
-                            <a class="btn btn-outline-dark btn-lg px-4 rounded-5" href="{{route('notice')}}">Cerca annuncio</a>
-                        </div>
+                        <p class="lead fw-light text-50 mb-4">Cerca tra gli annunci!</p>
                     </div>
                 </div>
             </div>
@@ -30,15 +26,21 @@
                                 <i class="bi bi-filter me-2"></i> FILTRI
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 
-                                <p class="fw-bold">LISTA CATEGORIE</p>
+                                <p class="fw-bold">CERCA PER CATEGORIE</p>
                                 
-                                @foreach ( $categories as $category )
+                                @foreach ($categories as $category)
+                                <p class="border-top">
+                                    <a href="{{route('byCategory',['category' => $category->id])}}" class="nav-link mt-4" wire:click.prevent="setCategory({{$category->id}})" class="category-link">{{$category->name}}</a>
+                                </p>
+                                @endforeach
+                                
+                                {{-- @foreach ( $categories as $category )
                                 <li class="nav-item"><a class="nav-link my-2 fw-light" href="{{route('byCategory',['category' => $category->id])}}">{{$category->name}}</a></li>
                                 
-                                @endforeach
+                                @endforeach --}}
                             </div>
                         </div>
                     </div>
