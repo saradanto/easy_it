@@ -17,7 +17,7 @@
                    <div class="mb-3">
                      <label class="h5  form-label" for="email">Email</label>
                      <div class="input-group ">
-                       <input type="email" class="form-control border-end-0" value="{{old('email')}}" placeholder="email" name="email" id="email" required>
+                       <input type="email" class="form-control border-end-0 rounded-start" value="{{old('email')}}" placeholder="email" name="email" id="email" required>
                        <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-person"></i></span>
                      </div>
                    </div>
@@ -36,8 +36,8 @@
 
                    </div>
                  
-                   <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-dark" type="submit">Login</button>
+                   <div class="d-grid gap-2 col-12 mx-auto mt-5">
+                    <button class="btn btn-dark rounded-3" type="submit">Login</button>
                     <p class="text-center fw-bold">o</p>
                     <a href="{{ route('redirectToGoogle')}}" class="btn btn-dark bg-transparent text-black fw-bold " ><i class="bi bi-google"> Accedi con Google</i></a>
                   </div>
