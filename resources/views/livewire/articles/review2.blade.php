@@ -7,9 +7,12 @@
 
 
 
-    @if($lastReviewedArticle)
-    <button type="button" class="btn btn-warning " wire:click="annulla">Annulla ultima azione</button>
+        @if($lastReviewedArticle)
+        <button type="button" class="btn btn-warning " wire:click="annulla" >Annulla ultima azione</button>
     @endif
+
+
+
 
 
     @if ($article)
