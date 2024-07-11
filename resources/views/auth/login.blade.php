@@ -28,11 +28,11 @@
                       <input type="password" class="form-control border-end-0" placeholder="password" name="password" id="passwordField" required>
                       <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-eye-slash" id="togglePassword"></i></span>
                      </div>
-                     @if ($errors->has('password'))
-                        <div class="alert alert-danger">
-                          {{ $errors->first('password') }}
-                        </div>
-                      @endif
+                     @if(Session::has('info'))
+                     <div class="alert alert-info">
+                         {{ Session::get('info') }}
+                     </div>
+                 @endif
 
                    </div>
                  
