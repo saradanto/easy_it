@@ -4,7 +4,7 @@
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder mb-2">Lista annunci</h1>
+                        <h1 class="display-5 fw-bolder mb-2">Ciao {{Auth::user()->name}}, ecco i tuoi annunci</h1>
                         
                     </div>
                 </div>
@@ -20,7 +20,10 @@
             @endif
             <div class="d-flex justify-content-between">
                 <h3 class="fw-bold h3">I tuoi articoli</h3>
-                <a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 py-2 px-3"><i class="bi bi-file-earmark-plus me-2"></i>Crea annuncio</a>
+                <a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 py-2 px-3 ms-auto"><i class="bi bi-file-earmark-plus me-2"></i>Crea annuncio</a>
+                @if (Auth::user()->is_revisor)
+                <a href="{{route('revisor.index')}}" class="btn btn-warning me-md-4 rounded-3 py-2 px-3 me-auto"><i class="bi bi-exclamation-triangle-fill me-2"></i></i>Revisiona articoli</a>
+                @endif
             </div>
             <div class="mt-5">
                 <div class="row">
@@ -84,7 +87,8 @@
                                                     <p class="card-title h4 mb-1">{{ $article->title}}</p>
                                                     <p class="card-text fw-lighter">Categoria: <span class="fw-bolder">{{ $article->category->name}}</span></p>
                                                     <p class="card-text h3 mb-0"><span class="">€ {{ $article->price}}</span></p>
-                                                    <p class="card-text fw-lighter"><span>Creato: {{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</span></p>
+                                                    <p class="card-text fw-lighter"><span>{{ $article->created_at->isoFormat('DD MMM YYYY') }}</span></p>
+                                                    {{-- ->locale('it_IT')->isoFormat('DD MMM YYYY') --}}
                                                 </div>
                                             </div>
                                         </div>

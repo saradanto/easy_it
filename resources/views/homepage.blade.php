@@ -29,13 +29,14 @@
     <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">Categorie</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
     @forelse ($categories as $category)
-      
-    <div class="card bg-tertiary border-0 rounded-4" style="width: 12rem; height: 12rem;">
+    <a href="#" class="nav-link">
+    <div class="card bg-tertiary border-0 rounded-4 m-4 shadow" style="width: 12rem; height: 12rem;">
       <div class="card-body d-flex flex-column justify-content-center align-items-center">
         <p class="card-text text-center h3 m-2"><i class="bi bi-car-front-fill"></i></p>
         <h5 class="card-title text-center h5 m-2">{{$category->name}}</h5>
       </div>
     </div>
+    </a>
     @empty
       <p>nessuna categoria</p>
     @endforelse
