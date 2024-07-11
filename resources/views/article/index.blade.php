@@ -31,7 +31,9 @@
                 aria-label="Search">
                 </form> --}}
                 <a href="{{route('article.create')}}" class="btn btn-outline-primary me-md-4 rounded-5">Crea nuovo articolo</a>
+                
             </div>
+           
         {{-- <table class="table border mt-2">
             <thead>
                 <tr>
