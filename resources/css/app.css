@@ -129,15 +129,45 @@ background-color: ;
 }
 
 .ourList>li>a {
-    color: white;
+    /* color: white;
     padding: 10px 16px;
     border-radius: 5px;
+    text-shadow: black 6px -4px 3px; */
+    transition: 0.4s;
+    color: #000000;
     text-transform: uppercase;
+    /* -webkit-text-stroke: 0.5px rgba(143, 211, 244, 1); */
+    /* font-size: 20px; */
+    /* text-decoration: none; */
+    padding: 10px 20px;
+    margin: 0 5px;
+    position: relative;
+    
+}
+
+.ourList>li>a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgba(143, 211, 244, 1);
+    transition: all 0.4s;
+    border-radius: 15px;
+    /* -webkit-text-stroke: rgba(143, 211, 244, 1); */
+}
+
+.ourList>li>a:hover::before {
+    width: 100%;
+    left: 0;
+    background: rgba(143, 211, 244, 1);
 }
 
 .ourList>li>a.active, .ourList>li>a:hover {
-    background: rgba(143, 211, 244, 1);
+    color: rgba(143, 211, 244, 1);
     transition: .5s;
+    /* -webkit-text-stroke: 1px rgb(0, 0, 0); */
 }
 
 .checkbtn {

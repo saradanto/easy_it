@@ -29,14 +29,14 @@
             
                     {{-- input titolo --}}
                     <div class="form-floating mb-4 col">
-                        <input class="form-control border-2" value="{{Auth::user()->name}}" wire:model.blur="Nome" type="text" id="Nome">
+                        <input class="form-control border-2" value="" wire:model.blur="Nome" type="text" id="Nome">
                         <label class="ms-2" for="Nome">Nome</label>
                        
                     </div>
     
                     {{-- input prezzo --}}
                     <div class="form-floating mb-4 col">
-                        <input class="form-control border-2" value="{{Auth::user()->email}}" wire:model.blur="email" id="email"></input>
+                        <input class="form-control border-2" value="" wire:model.blur="email" id="email"></input>
                         <label class="ms-2" for="email">Email</label>
                        
                     </div>

@@ -17,7 +17,7 @@
                    <div class="mb-3">
                      <label class="h5  form-label" for="email">Email</label>
                      <div class="input-group ">
-                       <input type="email" class="form-control border-end-0" placeholder="email" name="email" id="email" required>
+                       <input type="email" class="form-control border-end-0" value="{{old('email')}}" placeholder="email" name="email" id="email" required>
                        <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-person"></i></span>
                      </div>
                    </div>
@@ -28,6 +28,12 @@
                       <input type="password" class="form-control border-end-0" placeholder="password" name="password" id="passwordField" required>
                       <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-eye-slash" id="togglePassword"></i></span>
                      </div>
+                     @if ($errors->has('password'))
+                        <div class="alert alert-danger">
+                          {{ $errors->first('password') }}
+                        </div>
+                      @endif
+
                    </div>
                  
                    <div class="d-grid gap-2 col-6 mx-auto">
@@ -41,7 +47,9 @@
   
                     <p class="text-center text-muted mt-3 mb-0">Non sei registrato?  <a href="{{ route('register')}}"
                       class="fw-bold text-body"><u>Clicca qui</u></a></p>
-                     
+                      <p class="text-center text-muted mt-3 mb-0">Password dimenticata  <a href="{{ route('password.request')}}"
+                        class="fw-bold text-body"><u>Clicca qui</u></a></p>
+                </form>     
               </div>
       
             </div>
@@ -49,6 +57,7 @@
         </div>
       </div>
     </div>
+    
       
   </section>
 </x-main>
