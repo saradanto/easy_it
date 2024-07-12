@@ -73,5 +73,11 @@
                 </div>
             </div>            
         </div>
+
+        <div>
+            {{-- notifiche alert --}}
+            
+        </div>
+
     </body>
 </x-main>
