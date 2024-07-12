@@ -29,14 +29,14 @@
             
                     {{-- input titolo --}}
                     <div class="form-floating mb-4 col">
-                        <input class="form-control border-2" value="" wire:model.blur="Nome" type="text" id="Nome">
+                        <input class="form-control border-2" value="{{ Auth::user()->name }}" name="Nome" type="text" id="Nome" disabled>
                         <label class="ms-2" for="Nome">Nome</label>
                        
                     </div>
     
                     {{-- input prezzo --}}
                     <div class="form-floating mb-4 col">
-                        <input class="form-control border-2" value="" wire:model.blur="email" id="email"></input>
+                        <input class="form-control border-2" value="{{ Auth::user()->email }}" wire:model.blur="email" id="email" disabled></input>
                         <label class="ms-2" for="email">Email</label>
                        
                     </div>
@@ -45,7 +45,7 @@
     
             {{-- input descrizione --}}
             <div class="form-floating mb-5">
-                <textarea class="form-control border-2" wire:model.blur="description" style="height: 180px" rows="5"></textarea>
+                <textarea class="form-control border-2" name="description" style="height: 180px" rows="5"></textarea>
                 <label for="description" id="description">Inserisci una descrizione...</label>
                 
             </div>
