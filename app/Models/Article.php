@@ -43,4 +43,9 @@ class Article extends Model
     public static function toBeRevisedCount(){
         return Article::where('is_accepted', null)->count();
     }
+
+    public function getPriceAttribute($value)
+    {
+        return str_replace('.', ',', $value);
+    }
 }
