@@ -27,11 +27,14 @@ class FiltroLivewire extends Component
     public function setCategory($categoryId){
         $this->category_id = $categoryId;
         $this->search = '';
+        $this->resetPage();
     }
 
     public function clearFilters(){
         $this->reset(['search', 'category_id']);
+        $this->resetPage();
     }
+
 
     public function render()
     {
@@ -39,16 +42,26 @@ class FiltroLivewire extends Component
         $query = Article::query();
 
         if($this->search){
-            $query->where('title', 'LIKE', '%' . $this->search . '%')->paginate(6);
+            $query->where('title', 'LIKE', '%' . $this->search . '%');
 
         } if ($this->category_id){
 
-            $query->where('category_id', $this->category_id)->paginate(6);
+            $query->where('category_id', $this->category_id);
 
         }
             $articles = $query->orderBy('created_at', 'desc')->paginate(6);
 
             return view('livewire.articles.filtro-livewire', ['articles' => $articles]);
+    }
+
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingCategoryId()
+    {
+        $this->resetPage();
     }
 
 
