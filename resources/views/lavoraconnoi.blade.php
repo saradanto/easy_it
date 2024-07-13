@@ -23,7 +23,7 @@
         
         <form wire:submit="store">
             <h3 class="h3   mt-5 pt-3">Lavora con noi</h3>
-            <p class="mb-4 fw-light">Compila il form e inviaci la tua richiesta</p>
+            <p class="mb-4 fw-light"> Inviaci la tua richiesta sara' esaminata da un amministratore</p>
     
             <div class="row">
             
@@ -44,11 +44,11 @@
             </div>
     
             {{-- input descrizione --}}
-            <div class="form-floating mb-5">
+            {{-- <div class="form-floating mb-5">
                 <textarea class="form-control border-2" name="description" style="height: 180px" rows="5"></textarea>
                 <label for="description" id="description">Inserisci una descrizione...</label>
                 
-            </div>
+            </div> --}}
            
            <div class="col-md-5 mb-3 text-center w-100">
                 {{-- <h5 class="h4">Vuoi diventare revisore?</h5> --}}
