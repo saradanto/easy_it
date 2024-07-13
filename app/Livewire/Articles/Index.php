@@ -6,8 +6,11 @@ use App\Models\Article;
 use App\Models\Category;
 use Livewire\Component;
 
+
 class Index extends Component
 {
+
+
 
     public $search = '';
     public $categories;

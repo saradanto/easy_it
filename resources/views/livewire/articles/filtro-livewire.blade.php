@@ -71,7 +71,9 @@
         </div>
 
         <div class="w-50">
-            {{ $articles->links()}}
+            <div>
+                {{ $articles->onEachSide(1)->links() }}
+            </div>
         </div>
 
     </div>

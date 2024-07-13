@@ -9,7 +9,10 @@ use Livewire\WithPagination;
 
 class FiltroLivewire extends Component
 {
+
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
+
 
     public $search = '';
     public $categories;
