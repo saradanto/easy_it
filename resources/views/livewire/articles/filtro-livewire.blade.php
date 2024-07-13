@@ -70,8 +70,10 @@
             @endforeach
         </div>
 
-        <div class="w-50">
-            {{ $articles->links()}}
+        <div class="container">
+            <div class="row">
+                <div class="col-12">{{ $articles->links()}}</div>
+            </div> 
         </div>
 
     </div>

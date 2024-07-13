@@ -5,11 +5,9 @@ namespace App\Livewire\Articles;
 use App\Models\Article;
 use App\Models\Category;
 use Livewire\Component;
-use Livewire\WithPagination;
 
 class FiltroLivewire extends Component
 {
-    use WithPagination;
 
     public $search = '';
     public $categories;
