@@ -19,6 +19,7 @@ class FiltroLivewire extends Component
     public $category_id;
 
 
+
     public function mount(){
         $this->categories = Category::all();
 
@@ -30,10 +31,14 @@ class FiltroLivewire extends Component
         $this->resetPage();
     }
 
+
     public function clearFilters(){
         $this->reset(['search', 'category_id']);
         $this->resetPage();
     }
+
+
+
 
 
     public function render()

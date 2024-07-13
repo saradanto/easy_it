@@ -46,7 +46,7 @@
                                                           @if (Auth::user()->is_revisor)
                                                           <i class="bi bi-shield-fill-check text-success me-2"></i>
                                                           @else
-                                                          <i class="bi bi-house-door me-2"></i> 
+                                                          <i class="bi bi-house-door me-2"></i>
                                                           @endif
                                                           <span class="fw-normal">{{ Auth::user()->name }}</span>
                                                         </a>
@@ -83,7 +83,7 @@
                                     </div>
                                     {{-- end accordion dashboard utente --}}
 
-                                    
+
                                     {{-- accordion filter search --}}
                                     <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
                                         <div class="accordion-item">
@@ -140,13 +140,17 @@
                                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                                 <div class="accordion-body">
                                                     <p>
-                                                        <a href="#" wire:click.prevent="clearFilters" class="category-link nav-link">Tutti gli articoli</a>
+                                                        <a href="#" wire:click.prevent="setAcceptanceStatus(null)" class="nav-link">Tutti gli articoli</a>
                                                     </p>
-                                                    @foreach ($categories as $category)
                                                     <p class="border-top">
-                                                        <a href="" class="nav-link mt-4" wire:click.prevent="setCategory({{$category->id}})" class="category-link">{{$category->name}}</a>
+                                                        <a href="#" wire:click.prevent="setAcceptanceStatus(true)" class="nav-link mt-4">Articoli Accettati</a>
                                                     </p>
-                                                    @endforeach
+                                                    <p class="border-top">
+                                                        <a href="#" wire:click.prevent="setAcceptanceStatus(false)" class="nav-link mt-4">Articoli Rifiutati</a>
+                                                    </p>
+                                                    <p class="border-top">
+                                                        <a href="#" wire:click.prevent="setAcceptanceStatus('pending')" class="nav-link mt-4">Articoli in Attesa</a>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>

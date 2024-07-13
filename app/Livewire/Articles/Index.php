@@ -15,6 +15,8 @@ class Index extends Component
     public $search = '';
     public $categories;
     public $category_id;
+    public $acceptanceStatus = null;
+
 
 
     public function mount(){
@@ -27,8 +29,19 @@ class Index extends Component
         $this->search = '';
     }
 
+    public function setAcceptanceStatus($status)
+    {
+        if ($status === 'pending') {
+            $this->acceptanceStatus = 'pending';
+        } elseif ($status === true || $status === false) {
+            $this->acceptanceStatus = $status;
+        } else {
+            $this->acceptanceStatus = null;
+        }
+    }
+
     public function clearFilters(){
-        $this->reset(['search', 'category_id']);
+        $this->reset(['search', 'category_id', 'acceptanceStatus']);
     }
 
     public function render()
@@ -42,6 +55,13 @@ class Index extends Component
         } if ($this->category_id){
 
             $query->where('category_id', $this->category_id)->paginate(6);
+
+        }  if ($this->acceptanceStatus !== null) {
+            if($this->acceptanceStatus === 'pending'){
+                $query->whereNull('is_accepted');
+            } else {
+                $query->where('is_accepted', $this->acceptanceStatus);
+            }
 
         }
             $articles = $query->orderBy('created_at', 'desc')->paginate(6);
