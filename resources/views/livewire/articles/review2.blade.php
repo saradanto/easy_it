@@ -12,8 +12,9 @@
         @endif
 
 
-
-
+        <div class="mt-3">
+            <a class="nav-link text-primary rounded-5 mb-5" href="{{route('article.index')}}"><i class="bi bi-arrow-left-short me-2"></i>Torna indietro</a>
+        </div>
 
     @if ($article)
 

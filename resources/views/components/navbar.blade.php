@@ -42,7 +42,7 @@
         </li>
       </ul>
       @guest  
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto ourList">
         <li class="nav-item">
           <a class="nav-link" href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i> login</a>
         </li>
@@ -51,74 +51,37 @@
         </li>
       @else
 
-      {{-- profilo con dropdown --}}
-      <li class="nav-item dropdown ms-auto me-3">
-        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-person-circle h5 me-2"></i>
-          Profilo
-        </a>
-        <ul class="dropdown-menu mt-4 me-5 p-2 border-0 shadow">
-          <div class="nav-item my-4 border-0" style="width: 300px">
-            <a href="{{route('article.index')}}" class="nav-link m-3">
-              <i class="bi bi-house"></i>
-              <span class="fw-bolder">Dashboard</span>
-            </a>
-          </div>
-          <div class="nav-item my-4 border-0" style="width: 300px">
-            <a href="{{route('revisor.index')}}" class="nav-link m-3">
-              <i class="bi bi-eye"></i>
-              <span class="fw-bolder">Sezione revisore</span>
-            </a>
-          </div>
-          <div class="nav-item">
-            <a href="{{route('article.index')}}" class="nav-link m-3">
-              @if (Auth::user()->is_revisor)
-              <i class="bi bi-shield-fill-check text-success"></i>
-              @else
-              <i class="bi bi-house-door"></i> 
-              @endif
-              <span class="fw-bolder">{{ Auth::user()->name }}</span>
-            </a>
-          </div>
-          <div class="nav-item m-3">
-            <form action="{{ route('logout')}}" method="POST">
-              @csrf
-              <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
-            </form>
-          </div>
-        </ul>
-      </li>
-      {{-- end profilo con dropdown --}}
 
       {{-- menu classico --}}
         <div class="nav-item ms-auto">
           <a href="{{route('article.index')}}" class="nav-link">
-            @if (Auth::user()->is_revisor)
-              <i class="bi bi-shield-fill-check text-success position-relative me-2 h5">
-                {{-- @if ($article->is_accepted === null)  
-                //alert notification
-                <span class="position-absolute top-0 start-100 translate-middle bg-danger rounded-circle" style="padding: 6px">
-                  <span class="visually-hidden">New alerts</span>
-                </span>
-                @endif --}}
-              </i>
-            @else
-              <i class="bi bi-house-door"></i> 
-            @endif
-              <span class="fw-bolder">{{ Auth::user()->name }}</span>
-          </a>
+            <li class="fw-light me-3">
+                @if (Auth::user()->is_revisor)
+                  <i class="bi bi-shield-fill-check text-success position-relative me-1 h6">
+                    {{-- @if ($article->is_accepted === null)  
+                    //alert notification
+                    <span class="position-absolute top-0 start-100 translate-middle bg-danger rounded-circle" style="padding: 6px">
+                      <span class="visually-hidden">New alerts</span>
+                    </span>
+                    @endif --}}
+                  </i>
+                @else
+                  <i class="bi bi-house-door"></i> 
+                @endif
+                Area personale</li>
+            </a>
         </div>
-        <div class="nav-item ms-3">
+        {{-- <div class="nav-item ms-3">
           <form action="{{ route('logout')}}" method="POST">
             @csrf
             <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
           </form>
-        </div>
+        </div> --}}
       </ul>
       @endguest
       {{-- fine menu classico --}}
 
-        <span class="ms-3"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">Crea annuncio</a></span>
+        <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">Crea annuncio</a></span>
     </div>
   </div>
 </nav>

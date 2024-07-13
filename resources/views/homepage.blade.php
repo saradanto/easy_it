@@ -57,12 +57,15 @@
       </div>
     </div> --}}
 
-    <div class="card border-0 mx-5 my-5 rounded-3 shadow bg-body-tertiary" style="width: 18rem;">
+    <div class="card mx-5 my-5 rounded-3 bg-body-tertiary" style="width: 19rem;">
       <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="...">
-      <div class="card-body">
-        <h5 class="card-title fw-bold h3 text-center">{{$article->title}}</h5>
-        <p class="card-text text-center">{{$article->category->name}}</p>
-        <p class="card-text text-center h4 fw-bold">€ {{$article->price}}</p>
+      <div class="card-body py-4">
+        <h5 class="card-title fw-bold h3">{{$article->title}}</h5>
+        <p class="card-text">{{$article->category->name}}</p>
+        <div class="d-flex justify-content-between">
+          <p class="card-text h4 fw-bold">€ {{$article->price}}</p>
+          <p class="rounded-3"><a class="btn btn-primary" href="{{route('article.show', ['article' => $article])}}">Visualizza</a></p>
+        </div>
       </div>
     </div>
 

@@ -4,7 +4,7 @@
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder mb-2">Ciao {{Auth::user()->name}}, ecco i tuoi annunci</h1>
+                        <h1 class="display-5 fw-bolder mb-2">Ciao {{Auth::user()->name}}, questa è la tua area personale</h1>
 
                     </div>
                 </div>
@@ -18,26 +18,82 @@
             </div>
 
             @endif
-            <div class="d-flex justify-content-between">
+            {{-- <div class="d-flex justify-content-between">
                 <h3 class="fw-bold h3">I tuoi articoli</h3>
                 <a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 py-2 px-3 ms-auto"><i class="bi bi-file-earmark-plus me-2"></i>Crea annuncio</a>
                 @if (Auth::user()->is_revisor)
                 <a href="{{route('revisor.index')}}" class="btn btn-warning me-md-4 rounded-3 py-2 px-3 me-auto"><i class="bi bi-exclamation-triangle-fill me-2"></i></i>Revisiona articoli</a>
                 @endif
-            </div>
+            </div> --}}
             <div class="mt-5">
                 <div class="row">
                             <div class="col-12 col-md-3">
 
+
+                                {{-- accordion dashboard utente --}}
                                     <div class="accordion" id="accordionPanelsStayOpenExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button h3 fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                <button class="accordion-button h3 fw-bolder border-bottom-0 mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                    <i class="bi bi-person me-2"></i>
+                                                    Profilo
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show mt-0" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="nav-item my-4 pb-2 border-bottom">
+                                                        <a href="{{route('article.index')}}" class="nav-link">
+                                                          @if (Auth::user()->is_revisor)
+                                                          <i class="bi bi-shield-fill-check text-success me-2"></i>
+                                                          @else
+                                                          <i class="bi bi-house-door me-2"></i> 
+                                                          @endif
+                                                          <span class="fw-normal">{{ Auth::user()->name }}</span>
+                                                        </a>
+                                                    </div>
+                                                    @if (Auth::user()->is_revisor)
+                                                    <div class="nav-item my-4 pb-2 border-bottom border-0">
+                                                        <a href="{{route('revisor.index')}}" class="nav-link">
+                                                          <i class="bi bi-eye me-2"></i>
+                                                          <span class="fw-normal">Sezione revisore</span>
+                                                        </a>
+                                                    </div>
+                                                    @endif
+                                                    <div class="nav-item my-4 pb-2 border-bottom border-0">
+                                                        <a href="{{route('article.index')}}" class="nav-link">
+                                                          <i class="bi bi-house me-2"></i>
+                                                          <span class="fw-normal">Dashboard</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item my-4 pb-2 border-bottom border-0">
+                                                        <a href="{{route('article.create')}}" class="nav-link">
+                                                            <i class="bi bi-file-earmark-plus me-2"></i>
+                                                            Crea annuncio
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item my-4 pb-2 border-bottom">
+                                                        <form action="{{ route('logout')}}" method="POST">
+                                                          @csrf
+                                                          <button class="nav-link" type="submit"><i class="bi bi-box-arrow-left me-2"></i> Logout</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- end accordion dashboard utente --}}
+
+                                    
+                                    {{-- accordion filter search --}}
+                                    <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button h3 fw-bolder border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                                     Cerca
                                                 </button>
                                             </h2>
-                                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">
+                                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body mt-0">
                                                     <form class="d-flex" >
                                                         <input wire:model.live="search" class="form-control me-2" name="search"
                                                         type="search" placeholder="Cerca Articolo"
@@ -47,12 +103,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {{-- end accordion filter search --}}
 
-
+                                    {{-- accordion filter category --}}
                                     <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header border-bottom-0">
-                                                <button class="accordion-button h3 fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                <button class="accordion-button h3 fw-bolder border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                                     Categorie
                                                 </button>
                                             </h2>
@@ -70,6 +127,32 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {{-- end accordion filter category --}}
+
+                                    {{-- accordion filter status article --}}
+                                    <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header border-bottom-0">
+                                                <button class="accordion-button h3 fw-bolder border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                    Categorie
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        <a href="#" wire:click.prevent="clearFilters" class="category-link nav-link">Tutti gli articoli</a>
+                                                    </p>
+                                                    @foreach ($categories as $category)
+                                                    <p class="border-top">
+                                                        <a href="" class="nav-link mt-4" wire:click.prevent="setCategory({{$category->id}})" class="category-link">{{$category->name}}</a>
+                                                    </p>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- end accordion status article --}}
+
 
                             </div>
                             <div class="col-12 col-md-9">
@@ -85,11 +168,24 @@
                                             </div>
                                             <div class="col-md-8 m-0">
                                                 <div class="card-body">
-                                                    <p class="card-title h4 mb-1">{{ $article->title}}</p>
-                                                    <p class="card-text fw-lighter">Categoria: <span class="fw-bolder">{{ $article->category->name}}</span></p>
-                                                    <p class="card-text h3 mb-0"><span class="">€ {{ $article->price}}</span></p>
-                                                    <p class="card-text fw-lighter"><span>{{ $article->created_at->isoFormat('DD MMM YYYY') }}</span></p>
-                                                    {{-- ->locale('it_IT')->isoFormat('DD MMM YYYY') --}}
+                                                    <div class="d-flex justify-content-between">
+                                                        <div>
+                                                            <p class="card-title h4 mb-1">{{ $article->title}}</p>
+                                                            <p class="card-text fw-lighter">Categoria: <span class="fw-bolder">{{ $article->category->name}}</span></p>
+                                                            <p class="card-text h3 mb-0"><span class="">€ {{ $article->price}}</span></p>
+                                                            <p class="card-text fw-lighter"><span>{{ $article->created_at->isoFormat('DD MMM YYYY') }}</span></p>
+                                                            {{-- ->locale('it_IT')->isoFormat('DD MMM YYYY') --}}
+                                                        </div>
+                                                        <div class="py-5">
+                                                            @if ($article->is_accepted)
+                                                            <i class="bi bi-patch-check-fill text-success h4"></i>
+                                                            @elseif ($article->is_accepted === null)
+                                                            <i class="bi bi-patch-check-fill text-warning h4"></i>
+                                                            @elseif (!$article->is_accepted)
+                                                            <i class="bi bi-patch-check-fill text-danger h4"></i>
+                                                            @endif
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -108,8 +204,9 @@
 
 
 
-
-                                {{ $articles->links()}}
+                                <div class="w-50">
+                                    {{ $articles->links()}}
+                                </div>
                             </div>
                         </div>
 
