@@ -84,6 +84,9 @@
         <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">Crea annuncio</a></span>
     </div>
   </div>
+  <x-_locale lang="it" />
+  <x-_locale lang="en" />
+  <x-_locale lang="es" />
 </nav>
 
 
