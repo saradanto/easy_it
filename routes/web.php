@@ -14,7 +14,9 @@ Route::get('/daniele', [PageController::class, 'daniele'])->name('daniele');
 Route::get('/juri', [PageController::class, 'juri'])->name('juri');
 Route::post('/send', [PageController::class, 'send'])->name('send');
 
+// change language
 
+Route::post('/lingua/{lang}', [PageController::class, 'setLanguage'])->name('setLocale');
 
 
 Route::resource('article', ArticleController::class)->middleware('auth');
@@ -35,3 +37,6 @@ Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('a
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
+

@@ -32,22 +32,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ourList ms-4">
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="{{route('homepage')}}">Home</a>
+          <a class="nav-link fw-bold" href="{{route('homepage')}}"> {{ __('components.home')}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="{{route('notice')}}">Annunci</a>
+          <a class="nav-link fw-bold" href="{{route('notice')}}"> {{ __('components.articles')}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="{{route('contact')}}">Contatti</a>
+          <a class="nav-link fw-bold" href="{{route('contact')}}"> {{ __('components.contacts')}}</a>
         </li>
       </ul>
       @guest  
       <ul class="navbar-nav ms-auto ourList">
         <li class="nav-item">
-          <a class="nav-link" href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i> login</a>
+          <a class="nav-link" href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i>  {{ __('components.login')}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i> Register</a>
+          <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i>  {{ __('components.register')}}</a>
         </li>
       @else
 
@@ -68,7 +68,7 @@
                 @else
                   <i class="bi bi-house-door"></i> 
                 @endif
-                Area personale</li>
+                {{ __('nav.account')}}</li>
             </a>
         </div>
         {{-- <div class="nav-item ms-3">
@@ -81,7 +81,7 @@
       @endguest
       {{-- fine menu classico --}}
 
-        <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">Crea annuncio</a></span>
+        <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">{{ __('nav.createArticle')}}</a></span>
     </div>
   </div>
   <x-_locale lang="it" />
