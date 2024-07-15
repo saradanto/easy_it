@@ -55,7 +55,7 @@
 
             @foreach ($articles as $article )
 
-            <div class="card mx-3 my-3 rounded-3 bg-body-tertiary" style="width: 17rem; height: 28rem">
+            <div class="card mx-3 my-3 rounded-3 bg-body-tertiary" style="width: 17rem; min-height: 28rem">
                 <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="...">
                 <div class="card-body py-4">
                   <h5 class="card-title fw-bold h3">{{$article->title}}</h5>

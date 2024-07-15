@@ -73,5 +73,17 @@
                 </div>
             </div>            
         </div>
+        
+        <div class="myIcon">
+            {{-- notifiche alert --}}
+            <a href="">
+                <i class="m-3 bi bi-shield-fill-check text-success" id="hover-me"></i>
+            </a>
+        </div>
+        <div class="myIcon">
+            <a href="">
+                <i class="m-3 bi bi-house-door" id="hover-me"></i>
+            </a>
+        </div>
     </body>
 </x-main>
