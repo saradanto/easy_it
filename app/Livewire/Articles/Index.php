@@ -67,6 +67,6 @@ class Index extends Component
             $articles = $query->orderBy('created_at', 'desc')->paginate(6);
 
 
-        return view('livewire.articles.index', ['articles' => $articles]);
+        return view ('livewire.articles.index', ['articles' => $articles]);
     }
 }
