@@ -7,8 +7,12 @@
 <<<<<<< HEAD
     "content-hash": "0e7ca30eaefc9ac6b57f70b07ba5f766",
 =======
+<<<<<<< HEAD
     "content-hash": "0abf6bb4a21b6167fa2c5240af1f72a4",
 >>>>>>> 129adc009c1e70688f3d05e4cc267e219678c1b5
+=======
+    "content-hash": "0e7ca30eaefc9ac6b57f70b07ba5f766",
+>>>>>>> 1fd724c (complete user story 5, create multiple image and edit view)
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
