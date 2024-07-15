@@ -15,8 +15,12 @@
 <<<<<<< HEAD
         "spatie/image": "^3.6",
 =======
+<<<<<<< HEAD
         "outhebox/blade-flags": "^1.5",
 >>>>>>> 129adc009c1e70688f3d05e4cc267e219678c1b5
+=======
+        "spatie/image": "^3.6",
+>>>>>>> 1fd724c (complete user story 5, create multiple image and edit view)
         "teamtnt/laravel-scout-tntsearch-driver": "^14.0"
     },
     "require-dev": {
