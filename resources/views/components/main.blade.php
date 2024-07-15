@@ -25,11 +25,19 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-body-tertiary">
+  <button
+        type="button"
+        class="btn btn-dark btn-floating p-1"
+        id="btn-back-to-top">
+        <i class="bi bi-arrow-up-short h4"></i>
+</button>
   
   <x-navbar />
   
   {{$slot}}
   
+
+
   <x-footer />
   
   

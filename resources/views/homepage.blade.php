@@ -47,15 +47,28 @@
   <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
     
     @forelse ($articles as $article)
-    <div class="card rounded-5 border-0 mx-3 my-5 bg-transparent" style="width: 18rem; height: auto;">
+    {{-- <div class="card rounded-5 border-0 mx-3 my-5 bg-transparent" style="width: 18rem; height: auto;">
       <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-3" alt="...">
       <div class="card-body ps-0">
-        {{-- <p class="btn btn-sm btn-outline-primary rounded-5 card-text fw-light mx-0">{{$article->category->name}}</p> --}}
+        <p class="btn btn-sm btn-outline-primary rounded-5 card-text fw-light mx-0">{{$article->category->name}}</p>
         <h5 class="card-title fw-bold h3 text-center">{{$article->title}}</h5>
         <p class="card-text text-center">{{$article->category->name}}</p>
         <p class="card-text text-center h4 fw-bold">€ {{$article->price}}</p>
       </div>
+    </div> --}}
+
+    <div class="card mx-5 my-5 rounded-3 bg-body-tertiary" style="width: 19rem;">
+      <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="...">
+      <div class="card-body py-4">
+        <h5 class="card-title fw-bold h3">{{$article->title}}</h5>
+        <p class="card-text">{{$article->category->name}}</p>
+        <div class="d-flex justify-content-between">
+          <p class="card-text h4 fw-bold">€ {{$article->price}}</p>
+          <p class="rounded-3"><a class="btn btn-primary" href="{{route('article.show', ['article' => $article])}}">Visualizza</a></p>
+        </div>
+      </div>
     </div>
+
     @empty
     <div class="card rounded-5 border-0 mx-3" style="width: 18rem; height: auto;">
       nessun articolo

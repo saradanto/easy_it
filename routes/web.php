@@ -30,7 +30,7 @@ Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback
 
 // revisore
 Route::get('revisor/index', [RevisorController::class, 'index'])->middleware('IsRevisor')->name('revisor.index');
-Route::get('lavoraconnoi', [RevisorController::class, 'lavoraconnoi'])->name('lavoraconnoi');
+Route::get('lavoraconnoi', [RevisorController::class, 'lavoraconnoi'])->middleware('auth')->name('lavoraconnoi');
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
