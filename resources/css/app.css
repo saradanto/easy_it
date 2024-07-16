@@ -354,9 +354,8 @@ input[type=file]::file-selector-button:hover {
 
 .card:hover {
     box-shadow: 0px 0px 10px #5ef7ff;
-    border: 2px solid #43cdff;
-    transform: scale(1.02);
-    transition: all 2s;
+    border: 1px solid #43cdff;
+    transition: all 0.4s;
 }
 
 /* end card home e card pagina dashboard */
