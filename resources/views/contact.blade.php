@@ -17,7 +17,7 @@
         
         <div class="container my-5 py-5 d-flex justify-content-center">
             <div class="col-12 border-2 bg-white p-5 rounded-4" style="width: 1000px"> 
-                <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i>{{__('revisor.come back')}}</a>
+                <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i>{{__('revisor.comeBack')}}</a>
             
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -36,8 +36,8 @@
             
             <form action="{{ route('send')}}" method="POST">
                 @csrf
-                <h3 class="h3   mt-5 pt-3">{{__('revisor.leave your feedback')}}</h3>
-                <p class="mb-4 fw-light">{{__('revisor.fill out the form')}}</p>
+                <h3 class="h3   mt-5 pt-3">{{__('revisor.leaveFeedback')}}</h3>
+                <p class="mb-4 fw-light">{{__('revisor.fillOut')}}</p>
         
                 <div class="row">
                 
@@ -60,7 +60,7 @@
                 {{-- input descrizione --}}
                 <div class="form-floating mb-5">
                     <textarea class="form-control border-2" name="description" style="height: 180px" rows="5"></textarea>
-                    <label for="description" id="description">{{__('revisor.insert a description')}}</label>
+                    <label for="description" id="description">{{__('revisor.insertDescription')}}</label>
                     
                 </div>
                
