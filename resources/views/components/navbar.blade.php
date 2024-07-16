@@ -90,28 +90,10 @@
       Centered dropdown
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Action two</a></li>
-      <li><a class="dropdown-item" href="#">Action three</a></li>
+      <li><a class="dropdown-item" href="#"><x-_locale lang="it" /></a></li>
+      <li><a class="dropdown-item" href="#"><x-_locale lang="en" /></a></li>
+      <li><a class="dropdown-item" href="#"><x-_locale lang="es" /></a></li>
     </ul>
-  </div>
-  
-
-  <div class="select-container">
-    <select class="select-box">
-      <option value="">
-        
-      </option>
-      <option value="first">
-        <x-_locale lang="it" />
-      </option>
-      <option value="second">
-        <x-_locale lang="en" />
-      </option>
-      <option value="third">
-        <x-_locale lang="es" />
-      </option>
-    </select>
   </div>
   
   
