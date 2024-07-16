@@ -8,8 +8,8 @@
          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
             <div class="card" style="border-radius: 15px;">
              <div class="card-body p-5">
-                 <h2 class="fw-bold  mb-2  ">Bentornato!</h2>
-                <p class="fw-light">Bentornato! Inserisci le tue credenziali</p>
+                 <h2 class="fw-bold  mb-2  ">{{__('authcp.welcome')}}</h2>
+                <p class="fw-light">{{__('authcp.wMessage')}}</p>
 
                 <form action="{{ route('login')}}" method="POST">
                    @csrf
@@ -35,16 +35,16 @@
                    <div class="d-grid gap-2 col-12 mx-auto mt-5">
                     <button class="btn btn-dark rounded-3" type="submit">Login</button>
                     <p class="text-center fw-bold">o</p>
-                    <a href="{{ route('redirectToGoogle')}}" class="btn btn-dark bg-transparent text-black fw-bold " ><i class="bi bi-google"> Accedi con Google</i></a>
+                    <a href="{{ route('redirectToGoogle')}}" class="btn btn-dark bg-transparent text-black fw-bold " ><i class="bi bi-google"> {{__('authcp.google')}}</i></a>
                   </div>
                    
                  
                 
   
-                    <p class="text-center text-muted mt-3 mb-0">Non sei registrato?  <a href="{{ route('register')}}"
-                      class="fw-bold text-body"><u>Clicca qui</u></a></p>
-                      <p class="text-center text-muted mt-3 mb-0">Password dimenticata  <a href="{{ route('password.request')}}"
-                        class="fw-bold text-body"><u>Clicca qui</u></a></p>
+                    <p class="text-center text-muted mt-3 mb-0">{{__('authcp.nRegister')}}  <a href="{{ route('register')}}"
+                      class="fw-bold text-body"><u>{{__('authcp.click')}}</u></a></p>
+                      <p class="text-center text-muted mt-3 mb-0">{{__('authcp.forgot')}}  <a href="{{ route('password.request')}}"
+                        class="fw-bold text-body"><u>{{__('authcp.click')}}</u></a></p>
                 </form>     
               </div>
       

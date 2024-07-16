@@ -8,13 +8,14 @@
           <div class="col-12 col-md-9 col-lg-7 col-xl-6">
             <div class="card" style="border-radius: 15px;">
               <div class="card-body p-5">
-                <h2 class="fw-bold  mb-2  ">Benvenuto!</h2>
-                <p class="fw-light">Benvenuto! Crea il tuo account e iniza a vendere</p>
+                <h2 class="fw-bold  mb-2  ">{{__('authcp.rWelcome')}}</h2>
+                <p class="fw-light">{{__('authcp.rWelcome2')}}</p>
+                  
                 <form class="" action="{{ route('register')}}" method="POST">
                   @csrf
                   
                     <div class="mb-3">
-                      <label class="h5  form-label" for="name">Nome</label>
+                      <label class="h5  form-label" for="name">{{__('authcp.rName')}}</label>
                       <div class="input-group ">
                         <input type="name" class="form-control border-end-0" value="{{old('name')}}" placeholder="nome" name="name" id="name" required>
                        <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-person"></i></span>
@@ -54,7 +55,7 @@
                       </div>   
                       
                       <div class="mb-3">
-                        <label class="h5  form-label" for="password">Conferma Password</label>
+                        <label class="h5  form-label" for="password">{{__('authcp.rConfirm')}}</label>
                         <div class="input-group ">
                          <input type="password" class="form-control border-end-0" placeholder="password" name="password_confirmation" id="password" >
                          <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-lock"></i></span>
@@ -63,13 +64,13 @@
                   
                   
                   <div class="d-grid gap-2 col-12 mx-auto mt-5">
-                    <button class="btn btn-dark rounded-3" type="submit">Registrati</button>
+                    <button class="btn btn-dark rounded-3" type="submit">{{__('authcp.rRecord')}}</button>
                     
                   </div>
       
                 
   
-                  <p class="text-center text-muted mt-3 mb-0">Hai gia un account?  <a href="{{ route('login')}}"
+                  <p class="text-center text-muted mt-3 mb-0"> {{__('authcp.rAccount')}} <a href="{{ route('login')}}"
                       class="fw-bold text-body"><u>Login here</u></a></p>
                       
                 </form>
