@@ -17,6 +17,11 @@ return [
       'lastAds' => 'Last Ads',
       'visualize' => 'Visualize' ,
       'noArticles' => 'No articles',
+      'workWithUs' => 'Work with us',
+      'insertData' => 'Insert Data',
+      'comeBack' => 'Come Back',
+      'sendRequest' => ' Send Request',
+      'name' => 'Name',
       
 
 

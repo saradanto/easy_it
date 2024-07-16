@@ -9,7 +9,7 @@
             <h1 class="display-5 fw-bolder mb-2">{{__('view.buySellEasy')}}</h1>
             <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
               <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-3 px-4">{{__('view.insertAd')}}</a>
-              <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">Cerca annuncio{{__('view.searchAd')}}</a>
+              <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">{{__('view.searchAd')}}</a>
             </div>
           </div>
         </div>

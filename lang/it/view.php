@@ -18,6 +18,13 @@ return [
       'lastAds' => 'Ultimi annnunci',
       'visualize' => 'Visualizza' ,
       'noArticles' => 'Nessun Articolo',
+      'workWithUs' => 'Lavora con Noi',
+      'insertData' => 'Inserisci i dati e invia la tua richiesta',
+      'comeBack' => 'Torna indietro',
+      'sendRequest' => ' Inviaci la tua richiesta sara esaminata da un amministratore',
+      'name' => 'Nome',
+      
+
 
       
 
