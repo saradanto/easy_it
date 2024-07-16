@@ -629,6 +629,11 @@ input[type=file]::file-selector-button:hover {
     --bs-dropdown-min-width: 4rem;
 }
 
+.dropdown-menu:hover {
+    background-color: rgba(143, 211, 244, 1);
+    transition: 0.4s;
+}
+
 /* .select-container {
     display: flex;
     justify-content: center;
