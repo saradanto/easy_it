@@ -5,8 +5,8 @@
       <div class="row gx-5 align-items-center justify-content-center">
         <div class="col-lg-8 col-xl-7 col-xxl-6">
           <div class="my-5 text-center text-xl-start">
-            <p class="lead fw-light text-50 mb-4">{{__('view.insertAds')}}</p>
             <h1 class="display-5 fw-bolder mb-2">{{__('view.buySellEasy')}}</h1>
+            <p class="lead fw-light text-50 mb-4">{{__('view.insertAds')}}</p>
             <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
               <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-3 px-4">{{__('view.insertAd')}}</a>
               <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">{{__('view.searchAd')}}</a>
