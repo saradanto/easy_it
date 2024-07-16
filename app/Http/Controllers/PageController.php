@@ -50,6 +50,12 @@ class PageController extends Controller
     return redirect()->route('homepage');
   }
 
+  public function setLanguage($lang){
+
+    session()->put('locale', $lang);
+    return redirect()->back();
+  }
+
 
 
 }
