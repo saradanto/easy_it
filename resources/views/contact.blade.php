@@ -17,7 +17,7 @@
         
         <div class="container my-5 py-5 d-flex justify-content-center">
             <div class="col-12 border-2 bg-white p-5 rounded-4" style="width: 1000px"> 
-                <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i>{{__('revisor.comeBack')}}</a>
+                <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i>{{__('view.comeBack')}}</a>
             
             @if ($errors->any())
                 <div class="alert alert-danger">
