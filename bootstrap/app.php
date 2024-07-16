@@ -16,11 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'IsRevisor'=> IsRevisor::class
         ]);
-        
+
         $middleware->web(append: [SetLocaleMiddleware::class]);
-        $middleware->alias([
-            'isRevisor' => IsRevisor::class 
-        ]);
+        /* $middleware->alias([
+            'isRevisor' => IsRevisor::class
+        ]); */
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
