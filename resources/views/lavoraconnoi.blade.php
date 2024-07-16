@@ -23,7 +23,7 @@
         
         <form wire:submit="store">
             <h3 class="h3   mt-5 pt-3">{{__('view.workWithUs')}}</h3>
-            <p class="mb-4 fw-light"> Inviaci la tua richiesta sara' esaminata da un amministratore{{__('view.sendRequest')}}</p>
+            <p class="mb-4 fw-light">{{__('view.sendRequest')}}</p>
     
             <div class="row">
             

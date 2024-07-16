@@ -10,7 +10,7 @@ return [
       'name' => 'Nome',
       'insertDescription' => 'Insert a description',
       'send' => 'Send' ,
-       'buySellEasy' => 'Buy Sell Easy',
+       'buySellEasy' => 'Buy and sell your favorite items in the Easy.it way',
       'insertAd' => 'Insert Ad',
       'searchAd' => 'Search Ad',
       'category' => 'Category',
@@ -22,6 +22,7 @@ return [
       'comeBack' => 'Come Back',
       'sendRequest' => ' Send Request',
       'name' => 'Name',
+      'insertAds' => 'Insert Ads',
       
 
 
