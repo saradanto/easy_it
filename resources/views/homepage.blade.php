@@ -5,11 +5,11 @@
       <div class="row gx-5 align-items-center justify-content-center">
         <div class="col-lg-8 col-xl-7 col-xxl-6">
           <div class="my-5 text-center text-xl-start">
-            <p class="lead fw-light text-50 mb-4">Qui puoi inserire e gestire i tuoi annunci!</p>
-            <h1 class="display-5 fw-bolder mb-2">Acquista e vendi i tuoi articoli preferiti in modo Easy.it</h1>
+            <p class="lead fw-light text-50 mb-4">{{__('view.insertAds')}}</p>
+            <h1 class="display-5 fw-bolder mb-2">{{__('view.buySellEasy')}}</h1>
             <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
-              <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-3 px-4">Inserisci un annuncio</a>
-              <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">Cerca annuncio</a>
+              <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-3 px-4">{{__('view.insertAd')}}</a>
+              <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">Cerca annuncio{{__('view.searchAd')}}</a>
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@
 
   @livewire('articles.filtro-scout')
 
-    <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">Categorie</h2>
+    <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.category')}}</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
     @forelse ($categories as $category)
     <a href="#" class="nav-link">
@@ -43,7 +43,7 @@
     
   </div>
   
-  <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">Ultimi annunci</h2>
+  <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.lastAds')}}</h2>
   <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
     
     @forelse ($articles as $article)
@@ -64,14 +64,14 @@
         <p class="card-text">{{$article->category->name}}</p>
         <div class="d-flex justify-content-between">
           <p class="card-text h4 fw-bold">€ {{$article->price}}</p>
-          <p class="rounded-3"><a class="btn btn-primary" href="{{route('article.show', ['article' => $article])}}">Visualizza</a></p>
+          <p class="rounded-3"><a class="btn btn-primary" href="{{route('article.show', ['article' => $article])}}">{{__('view.visualize')}}</a></p>
         </div>
       </div>
     </div>
 
     @empty
     <div class="card rounded-5 border-0 mx-3" style="width: 18rem; height: auto;">
-      nessun articolo
+      {{__('view.noArticles')}}
     </div>
     @endforelse
     

@@ -10,7 +10,13 @@ return [
       'name' => 'Nome',
       'insertDescription' => 'Insert a description',
       'send' => 'Send' ,
-
+       'buySellEasy' => 'Buy Sell Easy',
+      'insertAd' => 'Insert Ad',
+      'searchAd' => 'Search Ad',
+      'category' => 'Category',
+      'lastAds' => 'Last Ads',
+      'visualize' => 'Visualize' ,
+      'noArticles' => 'No articles',
       
 
 

@@ -10,6 +10,14 @@ return [
       'name' => 'Nome',
       'insertDescription' => 'Inserisci una descrizione...',
       'send' => 'Invia' ,
+      'insertAds' => 'Qui puoi inserire e gestire i tuoi annunci!',
+      'buySellEasy' => 'Acquista e vendi i tuoi articoli preferiti in modo Easy.it',
+      'insertAd' => 'Inserisci un annuncio',
+      'searchAd' => 'Cerca Annuncio',
+      'category' => 'Categorie',
+      'lastAds' => 'Ultimi annnunci',
+      'visualize' => 'Visualizza' ,
+      'noArticles' => 'Nessun Articolo',
 
       
 
