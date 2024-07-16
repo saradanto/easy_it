@@ -68,7 +68,7 @@
                 @else
                   <i class="bi bi-house-door"></i> 
                 @endif
-                {{ __('nav.account')}}</li>
+                {{ __('components.account')}}</li>
             </a>
         </div>
         {{-- <div class="nav-item ms-3">
@@ -81,7 +81,7 @@
       @endguest
       {{-- fine menu classico --}}
 
-        <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">{{ __('nav.createArticle')}}</a></span>
+        <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">{{ __('components.createArticle')}}</a></span>
     </div>
   </div>
   <x-_locale lang="it" />
