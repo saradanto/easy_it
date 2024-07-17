@@ -77,7 +77,7 @@
 </div>
 
 
-<div class="container">
+{{-- <div class="container">
     <div class="row">
         <div class="col-12 d-flex justify-content-center align-items-center mt-5">
             <div class="card" style="width: 50rem; border:none; ">
@@ -113,6 +113,7 @@
               </div>
         </div>
     </div>
-</div>
+</div> --}}
+
 
 </x-main>

@@ -7,6 +7,13 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
 });
 var swiper2 = new Swiper(".mySwiper2", {
   spaceBetween: 10,
