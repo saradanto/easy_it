@@ -1,4 +1,6 @@
 <?php
 return [
-    '$category->abbigliamento' => 'cazzi'
+    'abbigliamento' => 'abbigliamento',
+    
+    
 ];

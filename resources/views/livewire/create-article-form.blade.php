@@ -75,7 +75,7 @@
                     <select wire:model.blur="category_id" class="form-select rounded-3 border-2 py-2 px-4" id="category">
                         <option value="" selected>Seleziona una categoria</option>
                         @foreach ($categories as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option value="{{$category->id}}">{{__("category.$category->name")}}</option>
                         @endforeach
                     </select>
                     @error('category_id')
