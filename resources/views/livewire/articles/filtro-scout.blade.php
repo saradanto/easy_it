@@ -15,10 +15,11 @@
                         @if($articles)
                             @forelse($articles as $article)
                                 <div class=" mt-2 bg-white border rounded shadow-sm">
-                                    <div class="p-2 border-bottom">
+                                    <div class="p-2 border-bottom d-flex justify-content-between">
                                         <a href="{{ route('article.show', ['article' => $article]) }}" class="text-decoration-none text-dark">
                                             <p class="my-3 h6">{{ $article->title }}</p>
                                         </a>
+                                        <span class="my-3 h6 text-muted">{{$article->category->name}}</span>
                                     </div>
                                 </div>
                                 @empty
@@ -34,10 +35,10 @@
                         @endif
                     </div>
               </div>
-              
-            
 
-            
+
+
+
         </div>
     </div>
 </div>

@@ -5,13 +5,14 @@ namespace App\Livewire\Articles;
 use App\Models\Article;
 use App\Models\Category;
 use Livewire\Component;
-
+use Livewire\WithPagination;
 
 class Index extends Component
 {
 
+    use WithPagination;
 
-
+    protected $paginationTheme = 'bootstrap';
     public $search = '';
     public $categories;
     public $category_id;
@@ -50,11 +51,11 @@ class Index extends Component
         $query = Article::query();
 
         if($this->search){
-            $query->where('title', 'LIKE', '%' . $this->search . '%')->paginate(6);
+            $query->where('title', 'LIKE', '%' . $this->search . '%');
 
         } if ($this->category_id){
 
-            $query->where('category_id', $this->category_id)->paginate(6);
+            $query->where('category_id', $this->category_id);
 
         }  if ($this->acceptanceStatus !== null) {
             if($this->acceptanceStatus === 'pending'){
