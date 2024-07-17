@@ -4,11 +4,11 @@
 
 
               <div class="container d-flex justify-content-center align-items-center flex-column mt-5 bg-white p-5 rounded-3 shadow">
-                <h2 class="h2 fw-bold text-center mb-4">Cerca</h2>
+                <h2 class="h2 fw-bold text-center mb-4">{{__('category.search')}}</h2>
                 <form class="d-flex w-50 input-group flex-nowrap border-2">
                   <span class="input-group-text border-end-0 bg-transparent" id="addon-wrapping"><i class="bi bi-search"></i></span>
                   <input wire:model.live="query" class="form-control me-2 border-start-0 rounded-end-3" name="search" type="search" placeholder="Cerca..." aria-label="Search" aria-describedby="addon-wrapping">
-                  <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">Cerca</a>
+                  <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">{{__('category.search')}}</a>
                 </form>
 
                     <div class="w-75">
@@ -26,7 +26,7 @@
                                     <div class="p-2 border-bottom">
                                         <div class="text-center mt-2 pt-2">
                                             <i class="bi bi-exclamation-triangle display-5 mb-2"></i>
-                                            <p class="fw-normal h3">Nessun annuncio trovato</p>
+                                            <p class="fw-normal h3">Nessun annuncio trovato{{__('category.notFound')}}</p>
                                         </div>
                                     </div>
                                 </div>

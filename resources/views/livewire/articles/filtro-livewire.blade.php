@@ -8,14 +8,14 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button h3 fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Cerca
+                            {{__('category.search')}}
                         </button>
                     </h2>
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <form class="d-flex" >
                                 <input wire:model.live="search" class="form-control me-2" name="search"
-                                type="search" placeholder="Cerca Articolo"
+                                type="search" placeholder="{{__('category.search')}}"
                                 aria-label="Search">
                             </form>
                         </div>
@@ -29,17 +29,17 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header border-bottom-0">
                         <button class="accordion-button h3 fw-bolder border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Categorie
+                            {{__('category.category')}}
                         </button>
                     </h2>
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <p>
-                                <a href="#" wire:click.prevent="clearFilters" class="category-link nav-link">Tutti gli articoli</a>
+                                <a href="#" wire:click.prevent="clearFilters" class="category-link nav-link">{{__('category.allArticle')}}</a>
                             </p>
                             @foreach ($categories as $category)
                             <p class="border-top">
-                                <a href="" class="nav-link mt-4" wire:click.prevent="setCategory({{$category->id}})" class="category-link">{{$category->name}}</a>
+                                <a href="" class="nav-link mt-4" wire:click.prevent="setCategory({{$category->id}})" class="category-link">{{__("category.$category->name")}}</a>
                             </p>
                             @endforeach
                         </div>
@@ -62,7 +62,7 @@
                   <p class="card-text">{{$article->category->name}}</p>
                   <div class="d-flex justify-content-between">
                     <p class="card-text h4 fw-bold">€ {{$article->price}}</p>
-                    <p class="rounded-3"><a class="btn btn-primary" href="{{route('article.show', ['article' => $article])}}">Visualizza</a></p>
+                    <p class="rounded-3"><a class="btn btn-primary" href="{{route('article.show', ['article' => $article])}}">{{__('category.show')}}</a></p>
                   </div>
                 </div>
               </div>
