@@ -21,103 +21,100 @@
     </a>
     <button class="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       {{-- <span class="navbar-toggler-icon "> --}}
-      {{-- </span> --}}
+        {{-- </span> --}}
         <div class="nav-hamburger">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ourList ms-4">
-        <li class="nav-item">
-          <a class="nav-link fw-bold" href="{{route('homepage')}}"> {{ __('components.home')}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold" href="{{route('notice')}}"> {{ __('components.articles')}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold" href="{{route('contact')}}"> {{ __('components.contacts')}}</a>
-        </li>
-      </ul>
-      @guest  
-      <ul class="navbar-nav ms-auto ourList">
-        <li class="nav-item">
-          <a class="nav-link" href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i>  {{ __('components.login')}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i>  {{ __('components.register')}}</a>
-        </li>
-      @else
-
-
-      {{-- menu classico --}}
-        <div class="nav-item ms-auto">
-          <a href="{{route('article.index')}}" class="nav-link">
-            <li class="fw-light me-3">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ourList ms-4">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="{{route('homepage')}}"> {{ __('components.home')}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="{{route('notice')}}"> {{ __('components.articles')}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="{{route('contact')}}"> {{ __('components.contacts')}}</a>
+          </li>
+        </ul>
+        @guest  
+        <ul class="navbar-nav ms-auto ourList">
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('login')}}"><i class="bi bi-box-arrow-in-right m-1"></i>  {{ __('components.login')}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i>  {{ __('components.register')}}</a>
+          </li>
+          @else
+          
+          
+          {{-- menu classico --}}
+          <div class="nav-item ms-auto">
+            <a href="{{route('article.index')}}" class="nav-link">
+              <li class="fw-light me-3">
                 @if (Auth::user()->is_revisor)
-                  <i class="bi bi-shield-fill-check text-success position-relative me-1 h6">
-                    {{-- @if ($article->is_accepted === null)  
-                    //alert notification
-                    <span class="position-absolute top-0 start-100 translate-middle bg-danger rounded-circle" style="padding: 6px">
-                      <span class="visually-hidden">New alerts</span>
-                    </span>
-                    @endif --}}
-                  </i>
+                <i class="bi bi-shield-fill-check text-success position-relative me-1 h6">
+                  {{-- @if ($article->is_accepted === null)  
+                  //alert notification
+                  <span class="position-absolute top-0 start-100 translate-middle bg-danger rounded-circle" style="padding: 6px">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                  @endif --}}
+                </i>
                 @else
-                  <i class="bi bi-house-door"></i> 
+                <i class="bi bi-house-door"></i> 
                 @endif
                 {{ __('components.account')}}</li>
-            </a>
+              </a>
+            </div>
+            {{-- <div class="nav-item ms-3">
+              <form action="{{ route('logout')}}" method="POST">
+                @csrf
+                <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
+              </form>
+            </div> --}}
+          </ul>
+          @endguest
+          {{-- fine menu classico --}}
+          
+          <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">{{ __('components.createArticle')}}</a></span>
         </div>
-        {{-- <div class="nav-item ms-3">
-          <form action="{{ route('logout')}}" method="POST">
-            @csrf
-            <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
-          </form>
-        </div> --}}
-      </ul>
-      @endguest
-      {{-- fine menu classico --}}
-
-        <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">{{ __('components.createArticle')}}</a></span>
-    </div>
-  </div>
-
-  <div class="dropdown-center colorMenu">
-    <button class="btn {{-- btn-secondary --}} dropdown-toggle worldButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-europe-africa worldIcon" viewBox="0 0 16 16">
-        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M3.668 2.501l-.288.646a.847.847 0 0 0 1.479.815l.245-.368a.81.81 0 0 1 1.034-.275.81.81 0 0 0 .724 0l.261-.13a1 1 0 0 1 .775-.05l.984.34q.118.04.243.054c.784.093.855.377.694.801-.155.41-.616.617-1.035.487l-.01-.003C8.274 4.663 7.748 4.5 6 4.5 4.8 4.5 3.5 5.62 3.5 7c0 1.96.826 2.166 1.696 2.382.46.115.935.233 1.304.618.449.467.393 1.181.339 1.877C6.755 12.96 6.674 14 8.5 14c1.75 0 3-3.5 3-4.5 0-.262.208-.468.444-.7.396-.392.87-.86.556-1.8-.097-.291-.396-.568-.641-.756-.174-.133-.207-.396-.052-.551a.33.33 0 0 1 .42-.042l1.085.724c.11.072.255.058.348-.035.15-.15.415-.083.489.117.16.43.445 1.05.849 1.357L15 8A7 7 0 1 1 3.668 2.501"/>
-      </svg>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#"><x-_locale lang="it" /></a></li>
-      <li><a class="dropdown-item" href="#"><x-_locale lang="en" /></a></li>
-      <li><a class="dropdown-item" href="#"><x-_locale lang="es" /></a></li>
-    </ul>
-  </div>
-</nav>
-
-
-
-{{-- <script>
-  // hamburger menu
-let hamburger = document.querySelector('.nav-hamburger');
-hamburger.addEventListener("click", function() {
-    document.body.classList.toggle('menu_open');
-});
-
-let myNavbar = document.querySelector('#myNavbar');
-// effetto onscroll, cambia la navbar e i vari link
-window.addEventListener('scroll', () => {
-  let scrolled = window.scrollY;
-  if (scrolled > 0) {
-    myNavbar.classList.add('bg-light');
-    myNavbar.classList.remove('bg-transparent');
-  } else {
-    myNavbar.classList.remove('bg-light')
-    myNavbar.classList.add('bg-transparent')
-  }
-});
-</script> --}}
+      </div>
+      
+      <div class="dropdown-center worldMenu">
+        <button class="btn dropdown-toggle bi bi-globe-europe-africa worldButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item languages" href="#"><x-_locale lang="it" /></a></li>
+          <li><a class="dropdown-item languages" href="#"><x-_locale lang="en" /></a></li>
+          <li><a class="dropdown-item languages" href="#"><x-_locale lang="es" /></a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    
+    
+    {{-- <script>
+      // hamburger menu
+      let hamburger = document.querySelector('.nav-hamburger');
+      hamburger.addEventListener("click", function() {
+      document.body.classList.toggle('menu_open');
+      });
+      
+      let myNavbar = document.querySelector('#myNavbar');
+      // effetto onscroll, cambia la navbar e i vari link
+      window.addEventListener('scroll', () => {
+      let scrolled = window.scrollY;
+      if (scrolled > 0) {
+      myNavbar.classList.add('bg-light');
+      myNavbar.classList.remove('bg-transparent');
+      } else {
+      myNavbar.classList.remove('bg-light')
+      myNavbar.classList.add('bg-transparent')
+      }
+      });
+    </script> --}}
