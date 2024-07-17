@@ -17,12 +17,13 @@ class Index extends Component
     public $categories;
     public $category_id;
     public $acceptanceStatus = null;
+    public $unreviewed_count;
 
 
 
     public function mount(){
         $this->categories = Category::all();
-
+        $this->updateUnreviewedCount();
     }
 
     public function setCategory($categoryId){
@@ -43,6 +44,11 @@ class Index extends Component
 
     public function clearFilters(){
         $this->reset(['search', 'category_id', 'acceptanceStatus']);
+    }
+
+    public function updateUnreviewedCount()
+    {
+        $this->unreviewed_count = Article::whereNull('is_accepted')->where('user_id', '!=', auth()->id())->count();
     }
 
     public function render()
@@ -68,6 +74,6 @@ class Index extends Component
             $articles = $query->orderBy('created_at', 'desc')->paginate(6);
 
 
-        return view ('livewire.articles.index', ['articles' => $articles]);
+        return view ('livewire.articles.index', ['articles' => $articles, 'unreviewed_count' => $this->unreviewed_count]);
     }
 }

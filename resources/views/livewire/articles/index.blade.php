@@ -9,13 +9,13 @@
                 </div>
             </div>
         </header>
-        
+
         <main class="container mt-5 pt-3">
             @if (session()->has('status'))
             <div class="alert alert-warning" role="alert">
                 {{ session('status') }}
             </div>
-            
+
             @endif
             {{-- <div class="d-flex justify-content-between">
                 <h3 class="fw-bold h3">I tuoi articoli</h3>
@@ -27,8 +27,8 @@
             <div class="mt-5">
                 <div class="row">
                     <div class="col-12 col-md-3">
-                        
-                        
+
+
                         {{-- accordion dashboard utente --}}
                         {{-- <div class="accordion" id="accordionPanelsStayOpenExample">
                             <div class="accordion-item"> -}}
@@ -53,6 +53,12 @@
                                             <a href="{{route('revisor.index')}}" class="nav-link">
                                                 <i class="bi bi-eye me-2"></i>
                                                 <span class="fw-normal">Sezione revisore</span>
+                                                @if ($unreviewed_count > 0)
+                                                    <span class="badge rounded-pill text-bg-danger">
+                                                        {{ $unreviewed_count }}
+                                                        <span class="visually-hidden">articoli da revisionare</span>
+                                                    </span>
+                                                @endif
                                             </a>
                                         </div>
                                         @endif
@@ -108,8 +114,8 @@
                                             </p>
                                         </div>
                                     </div>
-                        
-                        
+
+
                         {{-- accordion filter search --}}
                         <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
                             <div class="accordion-item shadow mb-4">
@@ -135,17 +141,17 @@
                             </div>
                         </div>
                         {{-- end accordion filter search --}}
-                        
+
                     </div>
                     <div class="col-12 col-md-9">
-                        
-                        
+
+
                         @forelse ($articles as $article )
-                        
+
                         <a href="{{route('article.show', ['article' => $article])}}" class="nav-link">
                             <div class="card mb-3 rounded-4" style="min-width: 16rem; min-height: 10rem;">
                                 <div class="row g-0">
-                                    <div class="col-md-4 p-3" style="height: 10rem; width: 10rem;">   
+                                    <div class="col-md-4 p-3" style="height: 10rem; width: 10rem;">
                                         {{-- @for ($i = 0; $i < 1; $i++)
                                         <img src="https://dummyimage.com/300x300/d4d4d4/fff" style="border-radius: 35px" class="img-fluid rounded-3" alt="...">
                                         <img src="https://dummyimage.com/300x300/d4d4d4/fff" style="border-radius: 35px" class="img-fluid rounded-3" alt="...">
@@ -178,33 +184,33 @@
                                 </div>
                             </div>
                         </a>
-                        
+
                         @empty
-                        
+
                         <div class="text-center mt-5 pt-5">
                             <i class="bi bi-exclamation-triangle display-5 mb-2"></i>
                             <p class="fw-normal h3">Nessun annuncio trovato</p>
                         </div>
-                        
+
                         @endforelse
-                        
-                        
-                        
-                        
+
+
+
+
                         <div class="w-50">
                             {{ $articles->links()}}
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
 </main>
 
 </div>

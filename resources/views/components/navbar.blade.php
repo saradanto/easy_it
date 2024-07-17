@@ -58,11 +58,11 @@
               <li class="fw-light me-3">
                 @if (Auth::user()->is_revisor)
                 @if($articlesCount > 0)
-                        <span class="badge rounded-pill text-bg-danger">
-                            {{ $articlesCount }}
-                            <span class="visually-hidden">articoli da revisionare</span>
-                        </span>
-                    @endif
+                    <span class="badge rounded-pill text-bg-danger">
+                        {{ $articlesCount }}
+                        <span class="visually-hidden">articoli da revisionare</span>
+                    </span>
+                @endif
                 <i class="bi bi-shield-fill-check text-success position-relative me-1 h6">
 
                   {{-- @if ($article->is_accepted === null)
