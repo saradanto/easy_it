@@ -15,7 +15,7 @@ return [
       'searchAd' => 'Search Ad',
       'category' => 'Category',
       'lastAds' => 'Last Ads',
-      'visualize' => 'Visualize' ,
+      'visualize' => 'Show' ,
       'noArticles' => 'No articles',
       'workWithUs' => 'Work with us',
       'insertData' => 'Insert Data',
