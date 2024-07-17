@@ -2,17 +2,17 @@
 
 return [
 
-    'home' => 'Home',
-    'articles' => 'Annunci',
-    'contacts' => 'Contatti',
-    'login' => 'Login',
+    'home' => 'Hogar',
+    'articles' => 'Anuncios',
+    'contacts' => 'Contactos',
+    'login' => 'Acceso',
     'register' => 'Register',
-    'account' => 'Area personale',
-    'createArticle' => 'Crea annuncio',
-    'maps' => 'Mappa del sito',
+    'account' => 'Registro',
+    'createArticle' => 'Crear anuncio',
+    'maps' => 'Mapa del sitio',
     
-    'info' => 'Informazioni',
-    'workWithUs' => 'Lavora con noi'
+    'info' => 'Información',
+    'workWithUs' => 'Trabaja con nosotros'
 
    
     

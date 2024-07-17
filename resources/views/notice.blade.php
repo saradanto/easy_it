@@ -6,9 +6,9 @@
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
                         {{-- <h1 class="display-5 fw-bolder mb-2">Annunci</h1> --}}
-                        <h1 class="display-5 fw-bolder mb-2">{{ __('ui.allArticles')}}</h1>
+                        <h1 class="display-5 fw-bolder mb-2">{{ __('view.allArticles')}}</h1>
                         {{-- <p class="lead fw-light text-50 mb-4">Cerca tra gli annunci!</p> --}}
-                        <p class="lead fw-light text-50 mb-4">{{ __('ui.search')}}</p>
+                        <p class="lead fw-light text-50 mb-4">{{ __('view.search')}}</p>
                     </div>
                 </div>
             </div>

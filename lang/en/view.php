@@ -23,6 +23,8 @@ return [
       'sendRequest' => ' Send Request',
       'name' => 'Name',
       'insertAds' => 'Insert Ads',
+      'allArticles' => 'All articles',
+      'search' => 'Search articles'
       
 
 
