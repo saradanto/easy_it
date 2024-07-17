@@ -1,24 +1,45 @@
 /* SWIPER */
 import {Swiper} from 'swiper';
 
+
 var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  var swiper2 = new Swiper(".mySwiper2", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});
+// var swiper = new Swiper(".mySwiper", {
+//     loop: false,
+//     spaceBetween: 10,
+//     slidesPerView: 4,
+//     freeMode: true,
+//     watchSlidesProgress: true,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//   });
+  // var swiper2 = new Swiper(".mySwiper2", {
+  //   loop: true,
+  //   spaceBetween: 10,
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   thumbs: {
+  //     swiper: swiper,
+  //   },
+  // });
   
 //   //* MY-SWIPER 
   
