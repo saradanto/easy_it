@@ -27,7 +27,7 @@
                                     <div class="p-2 border-bottom">
                                         <div class="text-center mt-2 pt-2">
                                             <i class="bi bi-exclamation-triangle display-5 mb-2"></i>
-                                            <p class="fw-normal h3">Nessun annuncio trovato{{__('category.notFound')}}</p>
+                                            <p class="fw-normal h3">{{__('category.notFound')}}</p>
                                         </div>
                                     </div>
                                 </div>

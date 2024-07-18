@@ -14,7 +14,7 @@ return [
     'save' => 'Ahorrar',
     'create' => 'Crea tu anuncio',
     'cMessage1' => '¡Aquí puedes colocar y administrar tus anuncios!',
-    'back' => 'Regresar',
+    'showAll' => 'Mira todo',
     'description' => 'Descripción',
     'title' => 'Título',
     'price' => 'Precio',
