@@ -14,7 +14,7 @@ return [
     'save' => 'Save',
     'create' => 'Create your article',
     'cMessage1' => 'Here you can place and manage your ads!',
-    'back' => 'Come back',
+    'showAll' => 'Show all',
     'description' => 'Description',
     'title' => 'Title',
     'price' => 'Price',
