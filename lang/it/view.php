@@ -23,6 +23,8 @@ return [
       'comeBack' => 'Torna indietro',
       'sendRequest' => ' Inviaci la tua richiesta sara esaminata da un amministratore',
       'name' => 'Nome',
+      'allArticles' => 'Tutti gli Articoli',
+      'search' => 'Cerca tra gli annunci'
       
 
 
