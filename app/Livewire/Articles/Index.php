@@ -53,27 +53,33 @@ class Index extends Component
 
     public function render()
     {
+        $query = Article::where('user_id', auth()->id())
+                        ->orWhere(function ($q) {
+                            $q->where('user_id', '!=', auth()->id())
+                            ->whereNull('is_accepted');
+                        });
 
-        $query = Article::query()->where('user_id', '!=', auth()->id());
-
-        if($this->search){
+        if ($this->search) {
             $query->where('title', 'LIKE', '%' . $this->search . '%');
-
-        } if ($this->category_id){
-
-            $query->where('category_id', $this->category_id);
-
-        }  if ($this->acceptanceStatus !== null) {
-            if($this->acceptanceStatus === 'pending'){
-                $query->whereNull('is_accepted');
-            } else {
-                $query->where('is_accepted', $this->acceptanceStatus);
-            }
-
         }
-            $articles = $query->orderBy('created_at', 'desc')->paginate(6);
 
+        if ($this->category_id) {
+            $query->where('category_id', $this->category_id);
+        }
 
-        return view ('livewire.articles.index', ['articles' => $articles, 'unreviewed_count' => $this->unreviewed_count]);
+        if ($this->acceptanceStatus !== null) {
+            $query->when($this->acceptanceStatus === 'pending', function ($q) {
+                $q->whereNull('is_accepted');
+            }, function ($q) {
+                $q->where('is_accepted', $this->acceptanceStatus);
+            });
+        }
+
+        $articles = $query->latest()->paginate(6);
+
+        return view('livewire.articles.index', [
+            'articles' => $articles,
+            'unreviewed_count' => $this->unreviewed_count
+        ]);
     }
 }
