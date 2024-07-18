@@ -58,7 +58,11 @@
     </div> --}}
 
     <div class="card mx-5 my-5 rounded-3 bg-body-tertiary" style="width: 19rem;">
-      <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="...">
+
+      <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://dummyimage.com/300x300/d4d4d4/fff' }}" alt="Immagine dell'articolo {{$article->title}}" class="card-img-top img-fluid rounded-top-3">
+
+      {{-- <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="..."> --}}
+
       <div class="card-body py-4">
         <h5 class="card-title fw-bold h3">{{$article->title}}</h5>
         <p class="card-text">{{$article->category->name}}</p>
@@ -76,7 +80,8 @@
     @endforelse
     
   </div>
-  
+
+  <a class="nav-link text-primary text-center rounded-5 mb-5" href="{{route('notice')}}"> {{__('category.back')}}<i class="bi bi-arrow-right-short ms-2 h2"></i></a>
   
   
 </x-main>
