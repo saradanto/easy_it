@@ -21,6 +21,7 @@
                                         </a>
                                         <span class="my-3 h6 text-muted">{{$article->category->name}}</span>
                                     </div>
+
                                 </div>
                                 @empty
                                 <div class="mt-2 bg-white border rounded shadow-sm">
@@ -32,6 +33,7 @@
                                     </div>
                                 </div>
                             @endforelse
+
                         @endif
                     </div>
               </div>

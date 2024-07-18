@@ -5,8 +5,11 @@ namespace App\Livewire\Articles;
 use App\Models\Article;
 use Livewire\Component;
 
+
 class FiltroScout extends Component
 {
+
+
     public $query='';
     public $articles;
 
