@@ -618,10 +618,7 @@ input[type=file]::file-selector-button:hover {
 
 /* DROPDOWN LINGUE */
 .worldMenu{
-    background-color: white;
     border-radius: 10px;
-    margin: 0;
-    padding: 0;
 }
 
 .worldButton {
@@ -638,17 +635,18 @@ input[type=file]::file-selector-button:hover {
 .worldButton:hover {
     transition: all 0.6s;
     background-color: white;
-    color: rgba(132, 250, 176, 1);
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px rgba(132, 250, 176, 1);
+    color: rgba(143, 211, 244, 1);
+    border: 1px solid rgba(143, 211, 244, 1);
+    box-shadow: 0px 0px 10px rgba(143, 211, 244, 1);
+    /* transform: scale(1.04); */
 }
 
-.worldMenu  .worldButton:checked {
+/* .worldMenu  .worldButton:checked {
     background-color: white;
     color: rgba(143, 211, 244, 1);
     border: 1px solid black;
     box-shadow: 0px 2px 15px rgba(143, 211, 244, 1);
-}
+} */
 
 .dropdown-menu {
     --bs-dropdown-min-width: 3.7rem;

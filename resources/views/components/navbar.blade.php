@@ -89,18 +89,19 @@
           {{-- fine menu classico --}}
 
           <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">{{ __('components.createArticle')}}</a></span>
+
+          <div class="dropdown-center worldMenu my-2">
+            <button class="btn dropdown-toggle bi bi-globe-europe-africa worldButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item languages" href="#"><x-_locale lang="it" /></a></li>
+              <li><a class="dropdown-item languages" href="#"><x-_locale lang="en" /></a></li>
+              <li><a class="dropdown-item languages" href="#"><x-_locale lang="es" /></a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="dropdown-center worldMenu">
-        <button class="btn dropdown-toggle bi bi-globe-europe-africa worldButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item languages" href="#"><x-_locale lang="it" /></a></li>
-          <li><a class="dropdown-item languages" href="#"><x-_locale lang="en" /></a></li>
-          <li><a class="dropdown-item languages" href="#"><x-_locale lang="es" /></a></li>
-        </ul>
-      </div>
     </nav>
 
 
