@@ -54,7 +54,7 @@ class Index extends Component
     public function render()
     {
 
-        $query = Article::query();
+        $query = Article::query()->where('user_id', '!=', auth()->id());
 
         if($this->search){
             $query->where('title', 'LIKE', '%' . $this->search . '%');
