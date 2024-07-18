@@ -5,23 +5,25 @@ namespace App\Livewire\Articles;
 use App\Models\Article;
 use App\Models\Category;
 use Livewire\Component;
-
+use Livewire\WithPagination;
 
 class Index extends Component
 {
 
+    use WithPagination;
 
-
+    protected $paginationTheme = 'bootstrap';
     public $search = '';
     public $categories;
     public $category_id;
     public $acceptanceStatus = null;
+    public $unreviewed_count;
 
 
 
     public function mount(){
         $this->categories = Category::all();
-
+        $this->updateUnreviewedCount();
     }
 
     public function setCategory($categoryId){
@@ -44,17 +46,22 @@ class Index extends Component
         $this->reset(['search', 'category_id', 'acceptanceStatus']);
     }
 
+    public function updateUnreviewedCount()
+    {
+        $this->unreviewed_count = Article::whereNull('is_accepted')->where('user_id', '!=', auth()->id())->count();
+    }
+
     public function render()
     {
 
         $query = Article::query();
 
         if($this->search){
-            $query->where('title', 'LIKE', '%' . $this->search . '%')->paginate(6);
+            $query->where('title', 'LIKE', '%' . $this->search . '%');
 
         } if ($this->category_id){
 
-            $query->where('category_id', $this->category_id)->paginate(6);
+            $query->where('category_id', $this->category_id);
 
         }  if ($this->acceptanceStatus !== null) {
             if($this->acceptanceStatus === 'pending'){
@@ -67,6 +74,6 @@ class Index extends Component
             $articles = $query->orderBy('created_at', 'desc')->paginate(6);
 
 
-        return view ('livewire.articles.index', ['articles' => $articles]);
+        return view ('livewire.articles.index', ['articles' => $articles, 'unreviewed_count' => $this->unreviewed_count]);
     }
 }

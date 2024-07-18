@@ -26,7 +26,9 @@ class AppServiceProvider extends ServiceProvider
             View::share('categories', Category::orderBy('name')->get());
         }
         Paginator::useBootstrap();
+
+        View::composer('components.navbar', 'App\Http\ViewComposers\NavbarComposer');
     }
 
-    
+
 }
