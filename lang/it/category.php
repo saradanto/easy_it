@@ -21,7 +21,8 @@ return [
     'allArticle' => 'Tutti gli articoli',
     'search' => 'Cerca',
     'show' => 'Visualizza',
-    'notFound' => 'Nessun annuncio trovato'
+    'notFound' => 'Nessun annuncio trovato',
+    'back' => 'Torna indietro'
 
     
     
