@@ -21,7 +21,8 @@ return [
     'allArticle' => 'All articles',
     'search' => 'Search',
     'show' => 'Show',
-    'notFound' => 'Not found'
+    'notFound' => 'Not found',
+    'back' => 'Come back'
 
     
     
