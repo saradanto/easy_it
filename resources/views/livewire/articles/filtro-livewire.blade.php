@@ -51,7 +51,7 @@
 
         </div>
 
-        <div class="col-12 col-md-9 d-flex flex-wrap">
+        <div class="col-12 col-md-9 d-flex flex-wrap justify-content-center">
 
             @foreach ($articles as $article )
 
