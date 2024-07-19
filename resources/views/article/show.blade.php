@@ -1,5 +1,73 @@
 <x-main>
 
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body {
+      background: #000;
+      color: #000;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper2 {
+      height: 80%;
+      width: 100%;
+    }
+
+    .mySwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
   <header class="" style="background-color: #CBE5EE; padding: 60px 0px;">
     <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
@@ -11,42 +79,37 @@
     </div>
 </header>
 
-{{-- swiper --}}
 <div class="container container-fluid mt-5 pt-5">
   <div class="row">
-      <div class="col-12 col-md-6">
-          <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2"> {{-- swiper-navigation swiper-pagination --}}
-              <div class="swiper-wrapper">
-                @foreach ($article->images as $key => $image)
-                <div class="swiper-slide">
-                  <img src="{{$image->getUrl(300, 300)}}" alt="Immagine dell'articolo {{$article->title}}" class="img-fluid rounded-3">
-                </div>
-                @endforeach
-                @if ($article->images->isEmpty())
-                <div class="swiper-slide">
-                  <img src="https://dummyimage.com/300x300/d4d4d4/fff" style="border-radius: 35px" class="img-fluid rounded-3" alt="...">
-                </div>
-                @endif
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-          </div>
-          <div thumbsSlider="" class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                @foreach ($article->images as $key => $image)
-                <div class="swiper-slide">
-                  <img src="{{$image->getUrl(300, 300)}}" alt="Immagine dell'articolo {{$article->title}}" class="img-fluid rounded-3">
-                </div>
-                @endforeach
-                @if ($article->images->isEmpty())
-                <div class="swiper-slide">
-                  <img src="https://dummyimage.com/300x300/d4d4d4/fff" style="border-radius: 35px" class="img-fluid rounded-3" alt="...">
-                </div>
-                @endif
-              </div>
-          </div>
+    <div class="col-12 col-md-6">
+
+
+      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          @foreach ($article->images as $key => $image)
+            <div class="swiper-slide">
+              <img src="{{$image->getUrl(300, 300)}}" alt="Immagine dell'articolo {{$article->title}}" class="img-fluid rounded-3 d-block w-100">
+            </div>
+            @endforeach
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-      {{-- end swiper --}}
+      <div thumbsSlider="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            @foreach ($article->images as $key => $image)
+            <div class="swiper-slide">
+              <img src="{{$image->getUrl(300, 300)}}" alt="Immagine dell'articolo {{$article->title}}" class="img-fluid rounded-3 d-block w-100">
+            </div>
+            @endforeach
+          </div>
+        </div>
+  </div>
+
+
+  
+
+
 
       <div class="col-12 col-md-6" >
           <h5 class="h2">{{$article->title}}</h5>
@@ -79,6 +142,24 @@
 
 <x-slot:swiper>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
 </x-slot:swiper>
 
 
