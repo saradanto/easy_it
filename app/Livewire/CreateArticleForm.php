@@ -4,8 +4,10 @@ namespace App\Livewire;
 
 use App\Jobs\ResizeImage;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
@@ -30,6 +32,8 @@ class CreateArticleForm extends Component
     public function store(){
 
         $this->validate();
+
+        $this->authorize('update', Category::findOrFail($this->category_id));
 
         $this->article = Article::create([
             'title'=> $this->title,
@@ -64,13 +68,18 @@ class CreateArticleForm extends Component
     }
 
     public function updatedTemporaryImages(){
-        if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
-            'temporary_images' => 'max:6'
-        ])){
-            foreach($this->temporary_images as $image){
-                $this->images[] = $image;
-            }
+        if(count($this->temporary_images) + count($this->images) > 6){
+            throw ValidationException::withMessages(['temporary_images' => 'Hai caricato troppe immagini']);
+        } else{
+
+            if($this->validate(
+                [
+                'temporary_images.*' => 'image|max:1024',
+                ])) {
+                    foreach($this->temporary_images as $image){
+                        $this->images[] = $image;
+                    }
+                }
         }
     }
 
