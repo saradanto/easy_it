@@ -44,7 +44,7 @@
   </div>
   
   <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.lastAds')}}</h2>
-  <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
+  <div class="container mt-5 px-5 d-flex flex-wrap justify-content-between gap-3">
     
     @forelse ($articles as $article)
     {{-- <div class="card rounded-5 border-0 mx-3 my-5 bg-transparent" style="width: 18rem; height: auto;">
@@ -57,7 +57,7 @@
       </div>
     </div> --}}
 
-    <div class="card mx-5 my-5 rounded-3 bg-body-tertiary" style="width: 19rem;">
+    <div class="card my-5 rounded-3 bg-body-tertiary" style="min-width: 16rem;">
 
       <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://dummyimage.com/300x300/d4d4d4/fff' }}" alt="Immagine dell'articolo {{$article->title}}" class="card-img-top img-fluid rounded-top-3">
 

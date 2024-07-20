@@ -33,6 +33,7 @@
                     @endif
 
                     <form wire:submit="store">
+                        <p class="fst-italic">* il campo è obbligatorio</p>
                         <h3 class="h3 mb-3 mt-5 pt-3">{{__('category.description')}}</h3>
                         
                         <div class="row">
@@ -40,7 +41,7 @@
                             {{-- input titolo --}}
                             <div class="form-floating mb-4 col-12 col-md-6">
                                 <input class="form-control border-2" wire:model.blur="title" type="text" id="title">
-                                <label class="ms-2" for="title">{{__('category.title')}}</label>
+                                <label class="ms-2" for="title">{{__('category.title')}} *</label>
                                 @error('title')
                                 <div class="alert alert-danger my-3 p-1" role="alert">
                                     {{ $message }}
@@ -51,7 +52,7 @@
                             {{-- input prezzo --}}
                             <div class="form-floating mb-4 col-12 col-md-6">
                                 <input class="form-control border-2" wire:model.blur="price" id="price"></input>
-                                <label class="ms-2" for="price">{{__('category.price')}}</label>
+                                <label class="ms-2" for="price">{{__('category.price')}} *</label>
                                 @error('price')
                                 <div class="alert alert-danger my-3 p-1" role="alert">
                                     {{ $message }}
@@ -64,7 +65,7 @@
                         {{-- input descrizione --}}
                         <div class="form-floating mb-5">
                             <textarea class="form-control border-2" wire:model.blur="description" style="height: 180px" rows="5"></textarea>
-                            <label for="description" id="description"> {{__('category.description')}}</label>
+                            <label for="description" id="description"> {{__('category.description')}} *</label>
                             @error('description')
                             <div class="alert alert-danger my-3 p-1" role="alert">
                                 {{ $message }}
@@ -76,7 +77,7 @@
                         {{-- input categoria --}}
                         <div class="mb-5 form-floating d-flex justify-content-center align-items-center">
                             <select wire:model.blur="category_id" class="form-select rounded-3 border-2 py-2 px-4" id="category">
-                                <option value="" selected>{{__('category.sCategory')}}</option>
+                                <option value="" selected>{{__('category.sCategory')}} *</option>
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{__("category.$category->name")}}</option>
                                 @endforeach

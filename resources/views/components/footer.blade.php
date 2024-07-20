@@ -30,33 +30,33 @@
       <div class="col mb-3">
         <h5> {{ __('components.maps')}}</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="{{route('homepage')}}" class="nav-link p-0 text-body-secondary">{{ __('components.home')}}</a></li>
-          <li class="nav-item mb-2"><a href="{{route('notice')}}" class="nav-link p-0 text-body-secondary">{{ __('components.articles')}}</a></li>
-          <li class="nav-item mb-2"><a href="{{route('contact')}}" class="nav-link p-0 text-body-secondary">{{ __('components.contacts')}}</a></li>
-          <li class="nav-item mb-2"><a href="{{route('login')}}" class="nav-link p-0 text-body-secondary">{{ __('components.login')}}</a></li>
-          <li class="nav-item mb-2"><a href="{{route('register')}}" class="nav-link p-0 text-body-secondary">{{ __('components.register')}}</a></li>
+          <li class="nav-item mb-2 text-start"><a href="{{route('homepage')}}" class="nav-link p-0 text-body-secondary">{{ __('components.home')}}</a></li>
+          <li class="nav-item mb-2 text-start"><a href="{{route('notice')}}" class="nav-link p-0 text-body-secondary">{{ __('components.articles')}}</a></li>
+          <li class="nav-item mb-2 text-start"><a href="{{route('contact')}}" class="nav-link p-0 text-body-secondary">{{ __('components.contacts')}}</a></li>
+          <li class="nav-item mb-2 text-start"><a href="{{route('login')}}" class="nav-link p-0 text-body-secondary">{{ __('components.login')}}</a></li>
+          <li class="nav-item mb-2 text-start"><a href="{{route('register')}}" class="nav-link p-0 text-body-secondary">{{ __('components.register')}}</a></li>
         </ul>
       </div>
   
       <div class="col mb-3">
         <h5>{{ __('components.info')}}</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="{{route('lavoraconnoi')}}" class="nav-link p-0 text-body-secondary">{{ __('components.workWithUs')}}</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2 text-start"><a href="{{route('lavoraconnoi')}}" class="nav-link p-0 text-body-secondary">{{ __('components.workWithUs')}}</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
         </ul>
       </div>
   
       <div class="col mb-3">
         <h5>Section</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2 text-start"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
         </ul>
       </div>
     </footer>
