@@ -29,7 +29,7 @@
           <span></span>
         </div>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse"  id="navbarSupportedContent">
         <ul class="navbar-nav ourList ms-4">
           <li class="nav-item">
             <a class="nav-link fw-bold" href="{{route('homepage')}}"> {{ __('components.home')}}</a>
@@ -51,11 +51,9 @@
           </li>
           @else
 
-
-          {{-- menu classico --}}
-          <div class="nav-item ms-auto">
+          <li class="nav-item ms-auto">
             <a href="{{route('article.index')}}" class="nav-link">
-              <li class="fw-light me-3">
+              <span class="fw-light me-3 nav-link">
                 @if (Auth::user()->is_revisor)
                 @if($articlesCount > 0)
                     <span class="badge rounded-pill text-bg-danger">
@@ -63,30 +61,15 @@
                         <span class="visually-hidden">articoli da revisionare</span>
                     </span>
                 @endif
-                <i class="bi bi-shield-fill-check text-success position-relative me-1 h6">
-
-                  {{-- @if ($article->is_accepted === null)
-                  //alert notification
-                  <span class="position-absolute top-0 start-100 translate-middle bg-danger rounded-circle" style="padding: 6px">
-                    <span class="visually-hidden">New alerts</span>
-                  </span>
-                  @endif --}}
-                </i>
+                <i class="bi bi-shield-fill-check text-success position-relative me-1 h6"></i>
                 @else
                 <i class="bi bi-house-door"></i>
                 @endif
-                {{ __('components.account')}}</li>
-              </a>
-            </div>
-            {{-- <div class="nav-item ms-3">
-              <form action="{{ route('logout')}}" method="POST">
-                @csrf
-                <button class="text-danger nav-link" type="submit"><i class="bi bi-box-arrow-left me-1"></i> Logout</button>
-              </form>
-            </div> --}}
-          </ul>
-          @endguest
-          {{-- fine menu classico --}}
+                {{ __('components.account')}}</span>
+            </a>
+          </li>
+        </ul>
+        @endguest
 
           <span class="CallToAction"><a href="{{route('article.create')}}" class="btn btn-dark me-md-4 rounded-3 px-3 py-2">{{ __('components.createArticle')}}</a></span>
 
