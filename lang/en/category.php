@@ -18,7 +18,7 @@ return [
     'description' => 'Description',
     'title' => 'Title',
     'price' => 'Price',
-    'allArticle' => 'All articles',
+    'allArticle' => 'All Items',
     'search' => 'Search',
     'show' => 'Show',
     'notFound' => 'Not found',

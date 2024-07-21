@@ -16,15 +16,15 @@ return [
       'category' => 'Category',
       'lastAds' => 'Last Ads',
       'visualize' => 'Show' ,
-      'noArticles' => 'No articles',
+      'noArticles' => 'No Items',
       'workWithUs' => 'Work with us',
       'insertData' => 'Insert Data',
-      'comeBack' => 'Come Back',
+      'comeBack' => 'Go Back',
       'sendRequest' => ' Send Request',
       'name' => 'Name',
       'insertAds' => 'Insert Ads',
-      'allArticles' => 'All articles',
-      'search' => 'Search articles'
+      'allArticles' => 'All Items',
+      'search' => 'Search items'
       
 
 
