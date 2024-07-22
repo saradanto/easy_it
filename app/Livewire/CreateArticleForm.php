@@ -18,7 +18,7 @@ class CreateArticleForm extends Component
     public $images = [];
     public $temporary_images;
 
-    #[Validate('required|min:5|max:200')]
+    #[Validate('required|min:5|max:20')]
     public $title;
     #[Validate('required|min:10|max:1000')]
     public $description;
