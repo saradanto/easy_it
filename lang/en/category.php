@@ -22,8 +22,9 @@ return [
     'search' => 'Search',
     'show' => 'Show',
     'notFound' => 'Not found',
-    'back' => 'Come back'
-
+    'back' => 'Come back',
+    'obligatory' => '*The field is mandatory',
+    
     
     
 ];

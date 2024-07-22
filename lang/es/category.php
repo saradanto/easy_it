@@ -22,7 +22,8 @@ return [
     'search' => 'Cerca',
     'show' => 'Vista',
     'notFound' => 'No se encontraron anuncios',
-    'back' => 'regresar'
+    'back' => 'regresar',
+    'obligatory' => '*El campo es obligatorio',
 
     
     
