@@ -24,7 +24,7 @@ class CreateArticleForm extends Component
     public $description;
     #[Validate('required|max:100000000')]
     public $price;
-    #[Validate('required')]
+    #[Validate('exists:categories,id',message:'Category is not valid')]
     public $category_id;
     public $article;
 
@@ -33,7 +33,7 @@ class CreateArticleForm extends Component
 
         $this->validate();
 
-        $this->authorize('update', Category::findOrFail($this->category_id));
+        /* $this->authorize('update', Category::findOrFail($this->category_id)); */
 
         $this->article = Article::create([
             'title'=> $this->title,

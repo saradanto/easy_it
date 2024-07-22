@@ -449,6 +449,15 @@ input[type=file]::file-selector-button:hover {
     z-index: 1;
 }
 
+.btn-custom {
+    background-color: #43cdff;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #0fa0d4;
+    border: none;
+}
+
 .quantity::before {
     content: "";
     position: absolute;
