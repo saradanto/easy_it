@@ -33,7 +33,7 @@
                     @endif
 
                     <form wire:submit="store">
-                        <p class="fst-italic">* il campo è obbligatorio</p>
+                        <p class="fst-italic">{{__('category.obligatory')}}</p>
                         <h3 class="h3 mb-3 mt-5 pt-3">{{__('category.description')}}</h3>
                         
                         <div class="row">
