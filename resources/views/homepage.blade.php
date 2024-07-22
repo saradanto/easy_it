@@ -68,7 +68,7 @@
         <p class="card-text">{{$article->category->name}}</p>
         <div class="d-flex justify-content-between">
           <p class="card-text h4 fw-bold">€ {{$article->price}}</p>
-          <p class="rounded-3"><a class="btn btn-primary" href="{{route('article.show', ['article' => $article])}}">{{__('view.visualize')}}</a></p>
+          <p class="rounded-3"><a class="btn btn-primary btn-custom" href="{{route('article.show', ['article' => $article])}}">{{__('view.visualize')}}</a></p>
         </div>
       </div>
     </div>
