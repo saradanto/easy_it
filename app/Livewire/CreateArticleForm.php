@@ -24,7 +24,8 @@ class CreateArticleForm extends Component
     public $description;
     #[Validate('required|max:100000000')]
     public $price;
-    #[Validate('exists:categories,id',message:'Category is not valid')]
+    #[Validate('required')]
+    #[Validate('exists:categories,id', message:'Category not valid')]
     public $category_id;
     public $article;
 
@@ -43,6 +44,8 @@ class CreateArticleForm extends Component
             'user_id'=> Auth::id()
         ]);
 
+
+
         if (count($this->images) > 0){
             foreach ($this->images as $image){
                 $newFileName = "articles/{$this->article->id}";
@@ -58,6 +61,8 @@ class CreateArticleForm extends Component
         $this->cleanForm();
         return redirect()->route('article.index');
     }
+
+
 
     public function cleanForm(){
         $this->title = '';
