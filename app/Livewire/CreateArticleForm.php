@@ -24,7 +24,7 @@ class CreateArticleForm extends Component
     public $description;
     #[Validate('required|max:100000000')]
     public $price;
-    #[Validate('required'|'exists:categories,id',message:'Category is not valid')]
+    #[Validate('exists:categories,id',message:'Category is not valid')]
     public $category_id;
     public $article;
 
