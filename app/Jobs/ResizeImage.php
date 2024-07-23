@@ -8,6 +8,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Spatie\Image\Enums\CropPosition;
+use Spatie\Image\Enums\Fit;
 use Spatie\Image\Enums\Unit;
 use Spatie\Image\Image;
 
@@ -38,7 +39,7 @@ class ResizeImage implements ShouldQueue
         $destPath = storage_path() . "/app/public/" . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
 
         Image::load($srcPath)
-            ->crop($w, $h, CropPosition::Center)
+            ->fit(Fit::Crop, $w, $h)
             ->watermark(
                 base_path('resources/img/easy-it.png'),
                 alpha: 50,
