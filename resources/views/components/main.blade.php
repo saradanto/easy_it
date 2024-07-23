@@ -14,6 +14,9 @@
 
   {{-- CDN swiper --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  {{-- CDN AOS --}}
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   {{-- favicon --}}
   <link rel="apple-touch-icon" sizes="180x180" href="{{URL::asset('favicon/apple-touch-icon.png')}}">
@@ -43,5 +46,6 @@
 
   {{$swiper ?? ''}}
   
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
