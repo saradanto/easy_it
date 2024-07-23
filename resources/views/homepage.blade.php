@@ -8,15 +8,15 @@
             <h1 class="display-5 fw-bolder mb-2">{{__('view.buySellEasy')}}</h1>
             <p class="lead fw-light text-50 mb-4">{{__('view.insertAds')}}</p>
             <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
-              <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-3 px-4">{{__('view.insertAd')}}</a>
-              <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">{{__('view.searchAd')}}</a>
+              <a href="{{route('article.create')}}" class="btn btn-outline-dark btn-lg me-md-4 rounded-3 px-4 myButtonInsert">{{__('view.insertAd')}}</a>
+              <a class="btn btn-dark btn-lg px-4 rounded-3 myButtonSearch" href="{{route('notice')}}">{{__('view.searchAd')}}</a>
             </div>
           </div>
         </div>
         {{-- <div data-aos="flip-up"> --}}
-          <div data-aos="flip-left"
+          <div data-aos="flip-up"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000" class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5 ms-5" src="{{URL::asset('assets/cuffie_easy_it.png')}}" alt="..." /></div>
+          data-aos-duration="2000" data-aos-anchor-placement="top-center" class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5 ms-5" src="{{URL::asset('assets/cuffie_easy_it.png')}}" alt="..." /></div>
           {{-- </div> --}}
         </div>
       </div>
