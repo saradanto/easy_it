@@ -21,11 +21,11 @@ class CreateArticleForm extends Component
     public $images = [];
     public $temporary_images;
 
-    #[Validate('required|min:5|max:200')]
+    #[Validate('required|min:5|max:20')]
     public $title;
-    #[Validate('required|min:10|max:1000')]
+    #[Validate('required|min:10|max:500')]
     public $description;
-    #[Validate('required|max:100000000')]
+    #[Validate('required|max:10')]
     public $price;
     #[Validate('required')]
     #[Validate('exists:categories,id', message:'Category not valid')]
