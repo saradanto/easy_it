@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'failed' => 'La tua Email non è corretta,inserisci una email valida.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'Email o password non corretta, riprova.',
+    'password' => 'Password non corretta',
+    'throttle' => 'Hai provato troppe volte. Riprova tra 10 secondi.',
 
 ];

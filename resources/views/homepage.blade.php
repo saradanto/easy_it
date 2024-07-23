@@ -81,7 +81,7 @@
     
   </div>
 
-  <a class="nav-link text-primary text-center rounded-5 mb-5" href="{{route('notice')}}"> {{__('category.showAll')}}<i class="bi bi-arrow-right-short ms-2 h2"></i></a>
+  <a class="nav-link text-primary text-center rounded-5 my-5" href="{{route('notice')}}"> {{__('category.showAll')}}<i class="bi bi-arrow-right-short ms-2 h5"></i></a>
   
   
 </x-main>
