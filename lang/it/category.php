@@ -22,8 +22,8 @@ return [
     'search' => 'Cerca',
     'show' => 'Visualizza',
     'notFound' => 'Nessun annuncio trovato',
-    'back' => 'Torna indietro'
-
+    'back' => 'Torna indietro',
+    'obligatory' => '*Il campo è obbligatorio',
     
     
 ];

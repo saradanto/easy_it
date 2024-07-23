@@ -31,12 +31,12 @@
     @livewire('articles.filtro-scout')
     
     <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.category')}}</h2>
-    <div data-aos="flip-left"
-    data-aos-easing="ease-out-cubic"
-    data-aos-duration="2000" class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
+    <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
       @forelse ($categories as $category)
       <a href="#" class="nav-link">
-        <div class="card bg-tertiary border-0 rounded-4 m-4 shadow" style="width: 12rem; height: 12rem;">
+        <div data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" class="card bg-tertiary border-0 rounded-4 m-4 shadow" style="width: 12rem; height: 12rem;">
           <div class="card-body d-flex flex-column justify-content-center align-items-center">
             <p class="card-text text-center h3 m-2"><i class="bi bi-car-front-fill"></i></p>
             <h5 class="card-title text-center h5 m-2">{{__("category.$category->name")}}</h5>
