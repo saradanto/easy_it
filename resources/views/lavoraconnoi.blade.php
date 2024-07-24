@@ -30,7 +30,7 @@
                     {{-- input titolo --}}
                     <div class="form-floating mb-4 col">
                         <input class="form-control border-2" value="{{ Auth::user()->name }}" name="Nome" type="text" id="Nome" disabled>
-                        <label class="ms-2" for="Nome">Nome{{__('view.name')}}</label>
+                        <label class="ms-2" for="Nome">{{__('view.name')}}</label>
                        
                     </div>
     
