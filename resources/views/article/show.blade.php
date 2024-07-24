@@ -107,7 +107,7 @@
   </div>
 
 
-  
+
 
 
 
@@ -125,7 +125,7 @@
               <input type="radio" name="rating" id="r5">
               <label for="r5"></label>
           </div> --}}
-          
+
           <h5 class="my-3 display-6 fw-normal">€ <span class="display-6 fw-bold">{{$article->price}}</span></h5>
           <hr>
           <h5 class="fw-light">Categoria: <span class="fw-semibold">{{$article->category->name}}</span></h5>
@@ -133,15 +133,16 @@
           <h5 class="fw-light">Descrizione: </h5>
           <p class="fw-light h5">{{$article->description}}</p>
           <hr>
+          <p class="card-text fw-lighter"><span><a href=" /chatify/{{$article->user->id }}" target="blank">Apri Chat</a>
           {{-- <p class="fw-normal">{{$article->description}}</p>
           <div class="row">
               <div class="col-12 col-md-6 d-flex flex-row">
                   <button type="button" class="quantity">quantità</button>
                   <button type="button" class="cart">aggiungi al carrello</button>
-              </div>                        
+              </div>
           </div> --}}
       </div>
-  </div>            
+  </div>
 </div>
 
 

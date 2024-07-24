@@ -74,6 +74,15 @@
                                                 Crea annuncio
                                             </a>
                                         </div>
+                                        <div class="nav-item my-4 pb-2 border-bottom border-0">
+                                            <a href="{{route('chatify')}}" class="nav-link">
+                                                <i class="bi bi-chat me-2"></i>
+                                                Apri Chat
+                                                @if($unreadMessagesCount > 0)
+                                                    <span class="badge bg-danger ms-2">{{ $unreadMessagesCount }}</span>
+                                                @endif
+                                            </a>
+                                        </div>
                                         <div class="nav-item my-4 pb-2 border-bottom">
                                             <form action="{{ route('logout')}}" method="POST">
                                                 @csrf
