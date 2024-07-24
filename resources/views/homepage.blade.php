@@ -1,5 +1,5 @@
 <x-main>
-  
+
   <header class="" style="background-color: #CBE5EE; padding: 130px 0px;">
     <div class="container px-5">
       <div class="row gx-5 align-items-center justify-content-center">
@@ -22,24 +22,24 @@
         </div>
       </div>
     </header>
-    
+
     @if (session()->has('message'))
     <div class="alert alert-success text-center shadow rounded">
       {{session('message')}}
     </div>
     @endif
-    
+
     @livewire('articles.filtro-scout')
-    
+
     <h2 class="h2 fw-bold text-center" style="margin: 120px 0px 50px 0px;">{{__('view.category')}}</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
       @forelse ($categories as $category)
-      <a href="#" class="nav-link">
+      <a href="{{route('byCategory', ['category' => $category])}}" class="nav-link">
         <div data-aos="fade-up"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1000" class="card bg-tertiary border-0 rounded-4 m-4 shadow" style="width: 12rem; height: 12rem;">
           <div class="card-body d-flex flex-column justify-content-center align-items-center">
-            <p class="card-text text-center h3 m-2"><i class="bi bi-car-front-fill"></i></p>
+            <p class="card-text text-center h3 m-2"><i class="{{$category->icon}}"></i></p>
             <h5 class="card-title text-center h5 m-2">{{__("category.$category->name")}}</h5>
           </div>
         </div>
@@ -47,12 +47,12 @@
       @empty
       <p>nessuna categoria</p>
       @endforelse
-      
+
     </div>
-    
+
     <h2 class="h2 fw-bold text-center" style="margin: 120px 0px 50px 0px;">{{__('view.lastAds')}}</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-between gap-3">
-      
+
       @forelse ($articles as $article)
       {{-- <div class="card rounded-5 border-0 mx-3 my-5 bg-transparent" style="width: 18rem; height: auto;">
         <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-3" alt="...">
@@ -63,13 +63,13 @@
           <p class="card-text text-center h4 fw-bold">€ {{$article->price}}</p>
         </div>
       </div> --}}
-      
+
       <div class="card my-5 rounded-3 bg-body-tertiary" style="min-width: 16rem;">
-        
+
         <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://dummyimage.com/300x300/d4d4d4/fff' }}" alt="Immagine dell'articolo {{$article->title}}" class="card-img-top img-fluid rounded-top-3">
-        
+
         {{-- <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="..."> --}}
-        
+
         <div class="card-body py-4">
           <h5 class="card-title fw-bold h3">{{$article->title}}</h5>
           <p class="card-text">{{$article->category->name}}</p>
@@ -79,16 +79,15 @@
           </div>
         </div>
       </div>
-      
+
       @empty
       <div class="card rounded-5 border-0 mx-3" style="width: 18rem; height: auto;">
         {{__('view.noArticles')}}
       </div>
       @endforelse
-      
+
     </div>
-    
+
     <a class="nav-link text-primary text-center rounded-5 mt-5" href="{{route('notice')}}"> {{__('category.showAll')}}<i class="bi bi-arrow-right-short ms-2 h5"></i></a>
-    
+
   </x-main>
-  
