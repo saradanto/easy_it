@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\GoogleSocialiteController;
 use App\Http\Controllers\RevisorController;
+use Illuminate\Support\Facades\Session;
 
 Route::resource('article', ArticleController::class);
 Route::get('/', [PageController::class, 'homepage'])->name('homepage');
@@ -17,6 +18,10 @@ Route::post('/send', [PageController::class, 'send'])->name('send');
 // change language
 
 Route::post('/lingua/{lang}', [PageController::class, 'setLanguage'])->name('setLocale');
+
+
+
+
 
 
 Route::resource('article', ArticleController::class)->middleware('auth');

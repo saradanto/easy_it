@@ -55,7 +55,7 @@ class PageController extends Controller
     session()->put('locale', $lang);
     return redirect()->back();
   }
-
+ 
 
 
 }
