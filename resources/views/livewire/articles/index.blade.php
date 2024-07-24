@@ -1,5 +1,5 @@
 <div>
-    <header class="" style="background-color: #CBE5EE; padding: 80px 0px;">
+    <header class="" style="background-color: #CBE5EE; padding: 60px 0px;">
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
@@ -24,7 +24,7 @@
                 <a href="{{route('revisor.index')}}" class="btn btn-warning me-md-4 rounded-3 py-2 px-3 me-auto"><i class="bi bi-exclamation-triangle-fill me-2"></i></i>Revisiona articoli</a>
                 @endif
             </div> --}}
-            <div class="mt-5">
+            <div>
                 <div class="row">
                     <div class="col-12 col-md-3">
 

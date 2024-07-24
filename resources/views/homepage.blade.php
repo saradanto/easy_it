@@ -31,7 +31,7 @@
     
     @livewire('articles.filtro-scout')
     
-    <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.category')}}</h2>
+    <h2 class="h2 fw-bold text-center" style="margin: 120px 0px 50px 0px;">{{__('view.category')}}</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
       @forelse ($categories as $category)
       <a href="#" class="nav-link">
@@ -50,7 +50,7 @@
       
     </div>
     
-    <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.lastAds')}}</h2>
+    <h2 class="h2 fw-bold text-center" style="margin: 120px 0px 50px 0px;">{{__('view.lastAds')}}</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-between gap-3">
       
       @forelse ($articles as $article)
@@ -88,7 +88,7 @@
       
     </div>
     
-    <a class="nav-link text-primary text-center rounded-5 my-5" href="{{route('notice')}}"> {{__('category.showAll')}}<i class="bi bi-arrow-right-short ms-2 h5"></i></a>
+    <a class="nav-link text-primary text-center rounded-5 mt-5" href="{{route('notice')}}"> {{__('category.showAll')}}<i class="bi bi-arrow-right-short ms-2 h5"></i></a>
     
   </x-main>
   
