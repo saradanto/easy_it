@@ -32,13 +32,13 @@
       <div class="collapse navbar-collapse"  id="navbarSupportedContent">
         <ul class="navbar-nav ourList ms-4">
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="{{route('homepage')}}"> {{ __('components.home')}}</a>
+            <a class="nav-link" href="{{route('homepage')}}"> {{ __('components.home')}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="{{route('notice')}}"> {{ __('components.articles')}}</a>
+            <a class="nav-link" href="{{route('notice')}}"> {{ __('components.articles')}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="{{route('contact')}}"> {{ __('components.contacts')}}</a>
+            <a class="nav-link" href="{{route('contact')}}"> {{ __('components.contacts')}}</a>
           </li>
         </ul>
         @guest
@@ -50,10 +50,9 @@
             <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person m-1"></i>  {{ __('components.register')}}</a>
           </li>
           @else
-
           <li class="nav-item ms-auto">
-            <a href="{{route('article.index')}}" class="nav-link">
-              <span class="fw-light me-3 nav-link">
+            <a href="{{route('article.index')}}" class="nav-link d-flex link-custom">
+              <span class="fw-light me-3 d-flex">
                 @if (Auth::user()->is_revisor)
                 @if($articlesCount > 0)
                     <span class="badge rounded-pill text-bg-danger">
@@ -63,7 +62,7 @@
                 @endif
                 <i class="bi bi-shield-fill-check text-success position-relative me-1 h6"></i>
                 @else
-                <i class="bi bi-house-door"></i>
+                <i class="bi bi-house-door me-1"></i>
                 @endif
                 {{ __('components.account')}}</span>
             </a>
@@ -82,6 +81,8 @@
               <li><a class="dropdown-item languages" href="#"><x-_locale lang="es" /></a></li>
             </ul>
           </div>
+
+          
         </div>
       </div>
 
