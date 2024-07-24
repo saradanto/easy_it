@@ -68,7 +68,7 @@
     }
   </style>
 
-  <header class="" style="background-color: #CBE5EE; padding: 60px 0px;">
+  {{-- <header class="" style="background-color: #CBE5EE; padding: 30px 0px;">
     <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
             <div class="col-lg-8 col-xl-7 col-xxl-6">
@@ -77,11 +77,11 @@
             </div>
         </div>
     </div>
-</header>
+  </header> --}}
 
 <div class="container container-fluid mt-5 pt-5">
-  <div class="row">
-    <div class="col-12 col-md-6">
+  <div class="row pt-3">
+    <div class="col-12 col-md-5">
 
 
       <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
@@ -111,9 +111,9 @@
 
 
 
-      <div class="col-12 col-md-6" >
-          <h5 class="h2">{{$article->title}}</h5>
-          <div class="rating w-25">
+      <div class="col-12 col-md-7 ps-5" >
+          <h5 class="h2 fw-bold">{{$article->title}}</h5>
+          {{-- <div class="rating w-25">
               <input type="radio" name="rating" id="r1">
               <label for="r1"></label>
               <input type="radio" name="rating" id="r2">
@@ -124,17 +124,22 @@
               <label for="r4"></label>
               <input type="radio" name="rating" id="r5">
               <label for="r5"></label>
-          </div>
+          </div> --}}
           
-          <h5>€ {{$article->price}}</h5>
+          <h5 class="my-3 display-6 fw-normal">€ <span class="display-6 fw-bold">{{$article->price}}</span></h5>
           <hr>
-          <p class="fw-normal">{{$article->description}}</p>
+          <h5 class="fw-light">Categoria: <span class="fw-semibold">{{$article->category->name}}</span></h5>
+          <hr>
+          <h5 class="fw-light">Descrizione: </h5>
+          <p class="fw-light h5">{{$article->description}}</p>
+          <hr>
+          {{-- <p class="fw-normal">{{$article->description}}</p>
           <div class="row">
               <div class="col-12 col-md-6 d-flex flex-row">
                   <button type="button" class="quantity">quantità</button>
                   <button type="button" class="cart">aggiungi al carrello</button>
               </div>                        
-          </div>
+          </div> --}}
       </div>
   </div>            
 </div>

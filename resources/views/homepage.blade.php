@@ -4,7 +4,8 @@
     <div class="container px-5">
       <div class="row gx-5 align-items-center justify-content-center">
         <div class="col-lg-8 col-xl-7 col-xxl-6">
-          <div class="my-5 text-center text-xl-start">
+          <div class="my-5 text-center text-xl-start" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000" data-aos-anchor-placement="top-center">
             <h1 class="display-5 fw-bolder mb-2">{{__('view.buySellEasy')}}</h1>
             <p class="lead fw-light text-50 mb-4">{{__('view.insertAds')}}</p>
             <div class="d-grid gap-1 d-sm-flex justify-content-sm-center justify-content-xl-start">
@@ -14,9 +15,9 @@
           </div>
         </div>
         {{-- <div data-aos="flip-up"> --}}
-          <div data-aos="flip-up"
+          <div data-aos="fade-left"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000" data-aos-anchor-placement="top-center" class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5 ms-5" src="{{URL::asset('assets/cuffie_easy_it.png')}}" alt="..." /></div>
+          data-aos-duration="1000" data-aos-anchor-placement="top-center" class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5 ms-5" src="{{URL::asset('assets/cuffie_easy_it.png')}}" alt="..." /></div>
           {{-- </div> --}}
         </div>
       </div>
@@ -30,13 +31,13 @@
     
     @livewire('articles.filtro-scout')
     
-    <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.category')}}</h2>
+    <h2 class="h2 fw-bold text-center" style="margin: 120px 0px 50px 0px;">{{__('view.category')}}</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-center">
       @forelse ($categories as $category)
       <a href="#" class="nav-link">
-        <div data-aos="flip-left"
+        <div data-aos="fade-up"
         data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000" class="card bg-tertiary border-0 rounded-4 m-4 shadow" style="width: 12rem; height: 12rem;">
+        data-aos-duration="1000" class="card bg-tertiary border-0 rounded-4 m-4 shadow" style="width: 12rem; height: 12rem;">
           <div class="card-body d-flex flex-column justify-content-center align-items-center">
             <p class="card-text text-center h3 m-2"><i class="bi bi-car-front-fill"></i></p>
             <h5 class="card-title text-center h5 m-2">{{__("category.$category->name")}}</h5>
@@ -49,7 +50,7 @@
       
     </div>
     
-    <h2 class="h2 fw-bold text-center" style="margin: 200px 0px 50px 0px;">{{__('view.lastAds')}}</h2>
+    <h2 class="h2 fw-bold text-center" style="margin: 120px 0px 50px 0px;">{{__('view.lastAds')}}</h2>
     <div class="container mt-5 px-5 d-flex flex-wrap justify-content-between gap-3">
       
       @forelse ($articles as $article)
@@ -87,7 +88,7 @@
       
     </div>
     
-    <a class="nav-link text-primary text-center rounded-5 my-5" href="{{route('notice')}}"> {{__('category.showAll')}}<i class="bi bi-arrow-right-short ms-2 h5"></i></a>
+    <a class="nav-link text-primary text-center rounded-5 mt-5" href="{{route('notice')}}"> {{__('category.showAll')}}<i class="bi bi-arrow-right-short ms-2 h5"></i></a>
     
   </x-main>
   
