@@ -133,7 +133,7 @@
           <h5 class="fw-light">Descrizione: </h5>
           <p class="fw-light h5">{{$article->description}}</p>
           <hr>
-          <p class="card-text fw-lighter"><span><a href=" /chatify/{{$article->user->id }}" target="blank">Apri Chat</a>
+          <p class="rounded-3"><a class="btn btn-primary btn-custom" href=" /chatify/{{$article->user->id }}" target="blank">Apri chat</a></p>
           {{-- <p class="fw-normal">{{$article->description}}</p>
           <div class="row">
               <div class="col-12 col-md-6 d-flex flex-row">
