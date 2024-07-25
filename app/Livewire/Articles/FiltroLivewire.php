@@ -46,6 +46,9 @@ class FiltroLivewire extends Component
 
         $query = Article::query();
 
+        $query->whereNotNull('is_accepted');
+
+
         if($this->search){
             $query->where('title', 'LIKE', '%' . $this->search . '%');
 
