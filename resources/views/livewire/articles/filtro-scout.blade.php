@@ -5,7 +5,7 @@
 
               <div class="container d-flex justify-content-center align-items-center flex-column mt-5 bg-white p-5 rounded-3 shadow">
                 <h2 class="h2 fw-bold text-center mb-4">{{__('category.search')}}</h2>
-                <form class="d-flex w-50 input-group flex-nowrap border-2">
+                <form class="d-flex w-100 input-group flex-nowrap border-2">
                   <span class="input-group-text border-end-0 bg-transparent" id="addon-wrapping"><i class="bi bi-search"></i></span>
                   <input wire:model.live="query" class="form-control me-2 border-start-0 rounded-end-3" name="search" type="search" placeholder="Cerca..." aria-label="Search" aria-describedby="addon-wrapping">
                   <a class="btn btn-dark btn-lg px-4 rounded-3" href="{{route('notice')}}">{{__('category.search')}}</a>

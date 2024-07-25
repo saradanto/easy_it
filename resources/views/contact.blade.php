@@ -16,7 +16,7 @@
         </header>
         
         <div class="container my-5 py-5 d-flex justify-content-center">
-            <div class="col-12 border-2 bg-white p-5 rounded-4" style="width: 1000px"> 
+            <div class="col-12 border-2 bg-white p-5 rounded-4" style="max-width: 1000px"> 
                 <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i>{{__('view.comeBack')}}</a>
             
             @if ($errors->any())
@@ -42,14 +42,14 @@
                 <div class="row">
                 
                         {{-- input titolo --}}
-                        <div class="form-floating mb-4 col">
+                        <div class="form-floating mb-4 col-12 col-md-6">
                             <input class="form-control border-2" name="name" type="text" id="name" >
                             <label class="ms-2" for="name">{{__('view.name')}}</label>
                            
                         </div>
         
                         {{-- input prezzo --}}
-                        <div class="form-floating mb-4 col">
+                        <div class="form-floating mb-4 col-12 col-md-6">
                             <input class="form-control border-2" name="email" id="email"></input>
                             <label class="ms-2" for="email">Email</label>
                            
