@@ -55,7 +55,7 @@
               <span class="fw-light me-3 d-flex">
                 @if (Auth::user()->is_revisor)
                 @if($articlesCount > 0)
-                    <span class="badge rounded-pill text-bg-danger">
+                    <span class="badge rounded-pill my-auto mx-2 text-bg-danger">
                         {{ $articlesCount }}
                         <span class="visually-hidden">articoli da revisionare</span>
                     </span>
