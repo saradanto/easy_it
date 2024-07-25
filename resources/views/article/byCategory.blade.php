@@ -14,12 +14,12 @@
 
 
     <div class="container mt-5 py-5">
-
+        
         <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i> {{__('category.back')}}</a>
-
+        <div class="row flex-wrap">
         @forelse ($articles as $article )
             
-            <div class="card mx-3 my-3 rounded-3 bg-body-tertiary" style="width: 17rem; min-height: 28rem">
+            <div class="card mx-4 my-3 rounded-3 bg-body-tertiary" style="width: 17rem; min-height: 28rem">
                 {{-- <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="..."> --}}
                 <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://dummyimage.com/300x300/d4d4d4/fff' }}" alt="Immagine dell'articolo {{$article->title}}" class="card-img-top img-fluid rounded-top-3">
                 <div class="card-body py-4">
@@ -41,7 +41,7 @@
         </div>
 
         @endforelse
-
+    </div>
     </div>
     {{-- <div class="container mt-5 py-5">
         <div class="row">
