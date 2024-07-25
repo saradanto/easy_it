@@ -129,7 +129,7 @@
                         <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
                             <div class="accordion-item shadow mb-4">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button h3 fw-bolder border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    <button class="accordion-button h3 fw-bolder border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
                                         CATEGORIE
                                     </button>
                                 </h2>

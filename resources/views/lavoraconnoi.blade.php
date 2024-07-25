@@ -16,7 +16,7 @@
     </header>
     
     <div class="container my-5 py-5 d-flex justify-content-center">
-        <div class="col-12 border-2 bg-white p-5 rounded-4" style="width: 1000px"> 
+        <div class="col-12 border-2 bg-white p-5 rounded-4" style="width: max-1000px"> 
             <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i>{{__('view.comeBack')}}</a>
         
         
@@ -28,14 +28,14 @@
             <div class="row">
             
                     {{-- input titolo --}}
-                    <div class="form-floating mb-4 col">
+                    <div class="form-floating mb-4 col-12">
                         <input class="form-control border-2" value="{{ Auth::user()->name }}" name="Nome" type="text" id="Nome" disabled>
                         <label class="ms-2" for="Nome">{{__('view.name')}}</label>
                        
                     </div>
     
                     {{-- input prezzo --}}
-                    <div class="form-floating mb-4 col">
+                    <div class="form-floating mb-4 col-12">
                         <input class="form-control border-2" value="{{ Auth::user()->email }}" wire:model.blur="email" id="email" disabled></input>
                         <label class="ms-2" for="email">Email</label>
                        

@@ -14,32 +14,33 @@
 
 
     <div class="container mt-5 py-5">
-    @forelse ($articles as $article)
-    <a href="{{route('article.show', ['article' => $article])}}" class="nav-link">
-        <div class="card mb-3 rounded-4" style="min-width: 16rem; height: 10rem;">
-            <div class="row g-0">
-                <div class="col-md-4 p-3" style="height: 10rem; width: 10rem;">
-                    <img src="https://dummyimage.com/300x300/d4d4d4/fff" style="border-radius: 35px" class="img-fluid rounded-3" alt="...">
-                </div>
-                <div class="col-md-8 m-0">
-                    <div class="card-body">
-                        <p class="card-title h4 mb-1">{{ $article->title}}</p>
-                        <p class="card-text fw-lighter">Categoria: <span class="fw-bolder">{{ $article->category->name}}</span></p>
-                        <p class="card-text h3 mb-0"><span class="">€ {{ $article->price}}</span></p>
-                        <p class="card-text fw-lighter"><span>{{ $article->created_at->isoFormat('DD MMM YYYY') }}</span></p>
-                        {{-- ->locale('it_IT')->isoFormat('DD MMM YYYY') --}}
+
+        <a class="nav-link text-primary rounded-5 mb-5" href="{{route('homepage')}}"><i class="bi bi-arrow-left-short me-2"></i> {{__('category.back')}}</a>
+
+        @forelse ($articles as $article )
+            
+            <div class="card mx-3 my-3 rounded-3 bg-body-tertiary" style="width: 17rem; min-height: 28rem">
+                {{-- <img src="https://dummyimage.com/300x300/d4d4d4/fff" class="card-img-top img-fluid rounded-top-3" alt="..."> --}}
+                <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://dummyimage.com/300x300/d4d4d4/fff' }}" alt="Immagine dell'articolo {{$article->title}}" class="card-img-top img-fluid rounded-top-3">
+                <div class="card-body py-4">
+                    <h5 class="card-title fw-bold h3">{{$article->title}}</h5>
+                    <p class="card-text">{{$article->category->name}}</p>
+                    <div class="d-flex justify-content-between">
+                        <p class="card-text h4 fw-bold">€ {{$article->price}}</p>
+                        <p class="rounded-3"><a class="btn btn-primary btn-custom" href="{{route('article.show', ['article' => $article])}}">{{__('category.show')}}</a></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </a>
-    @empty
+        
 
-    <div class="text-center mt-5 pt-5">
-        <i class="bi bi-exclamation-triangle display-5 mb-2"></i>
-        <p class="fw-normal h3">Nessun annuncio trovato</p>
-    </div>
-    @endforelse
+        @empty
+
+        <div class="text-center mt-5 pt-5">
+            <i class="bi bi-exclamation-triangle display-5 mb-2"></i>
+            <p class="fw-normal h3">Nessun annuncio trovato</p>
+        </div>
+
+        @endforelse
 
     </div>
     {{-- <div class="container mt-5 py-5">
