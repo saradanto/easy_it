@@ -63,12 +63,6 @@
                                         </div>
                                         @endif
                                         <div class="nav-item my-4 pb-2 border-bottom border-0">
-                                            <a href="{{route('article.index')}}" class="nav-link">
-                                                <i class="bi bi-house me-2"></i>
-                                                <span class="fw-normal">Dashboard</span>
-                                            </a>
-                                        </div>
-                                        <div class="nav-item my-4 pb-2 border-bottom border-0">
                                             <a href="{{route('article.create')}}" class="nav-link">
                                                 <i class="bi bi-file-earmark-plus me-2"></i>
                                                 Crea annuncio
